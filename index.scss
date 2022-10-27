@@ -18,13 +18,9 @@
 // -- animation --
 
 @keyframes textshow {
-    0% {
-        transform: rotateY(270deg);
-    }
 
     100% {
         opacity: 1;
-        transform: rotateY(360deg)
     }
 }
 
@@ -233,16 +229,25 @@
 
                 h3 {
                     position: absolute;
-                    top: 68.06%;
+                    top: 72.13%;
                     left: 13.7%;
                     @include font(playfair, 16px, 1.875vw, 36px, 600, #000000);
                 }
 
                 p {
                     position: absolute;
-                    top: 77.31%;
+                    top: 81.39%;
                     left: 13.05%;
                     @include font(hind, 10px, 1.25vw, 24px, 400, #000000)
+                }
+
+                video {
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    @include picsize(300px, 91%, 883px);
                 }
 
                 img {
@@ -252,6 +257,9 @@
                     bottom: 0;
                     margin: auto;
                     @include picsize(300px, 91%, 883px);
+                    &:hover{
+                        opacity: 0;
+                    }
                 }
             }
 
@@ -259,11 +267,19 @@
                 position: relative;
                 height: 100vh;
 
+                video{
+                    position: absolute;
+                    top: 10%;
+                    @include picsize(178px, 49.94vw, 959px);
+                }
+
                 img {
                     position: absolute;
                     top: 10%;
                     @include picsize(178px, 49.94vw, 959px);
-
+                    &:hover{
+                        opacity: 0;
+                    }
                 }
 
 

@@ -41,11 +41,10 @@ serviceContent.addEventListener('mouseenter', () => {
 
 serviceContent.addEventListener('mouseout', () => {
     serviceContent.innerHTML = `
-    Unique value, choose the right light can show the exclusive edge.</br>
-    We carry the expectations of people from all walks of life, </br>
-    provide us with steady and steady progress, Covering planning, design,
-    shooting,post-production,</br>
-    and there are cooperation teams from all walks of life to cooperate.
+    Unique value, choose the right light to reveal the exclusive sharpness.</br>
+                We provide all kinds of photography services with the expectation of all people.</br>
+                We also provide customized quotations for our clients to achieve the maximum benefit of win-win situation.</br>
+                We cover planning, design, shooting, and post-production, and have a team of collaborators from various industries to work with. We treat each other with sincerity and get the biggest harvest.</br>
     `
 })
 

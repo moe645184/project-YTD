@@ -15,12 +15,8 @@
   src: url(/font-family/PlayfairDisplay-VariableFont_wght.ttf);
 }
 @keyframes textshow {
-  0% {
-    transform: rotateY(270deg);
-  }
   100% {
     opacity: 1;
-    transform: rotateY(360deg);
   }
 }
 @keyframes svgshow {
@@ -217,7 +213,7 @@
 }
 * body main .service h3 {
   position: absolute;
-  top: 68.06%;
+  top: 72.13%;
   left: 13.7%;
   font-family: playfair;
   font-size: clamp(16px, 1.875vw, 36px);
@@ -226,12 +222,20 @@
 }
 * body main .service p {
   position: absolute;
-  top: 77.31%;
+  top: 81.39%;
   left: 13.05%;
   font-family: hind;
   font-size: clamp(10px, 1.25vw, 24px);
   font-weight: 400;
   color: #000000;
+}
+* body main .service video {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: clamp(300px, 91%, 883px);
 }
 * body main .service img {
   position: absolute;
@@ -241,14 +245,25 @@
   margin: auto;
   width: clamp(300px, 91%, 883px);
 }
+* body main .service img:hover {
+  opacity: 0;
+}
 * body main .goal {
   position: relative;
   height: 100vh;
+}
+* body main .goal video {
+  position: absolute;
+  top: 10%;
+  width: clamp(178px, 49.94vw, 959px);
 }
 * body main .goal img {
   position: absolute;
   top: 10%;
   width: clamp(178px, 49.94vw, 959px);
+}
+* body main .goal img:hover {
+  opacity: 0;
 }
 * body main .goal h2 {
   position: absolute;
