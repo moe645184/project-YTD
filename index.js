@@ -1,0 +1,133 @@
+//burger show & hidden
+
+const body = document.querySelector('body')
+const header = document.querySelector('header')
+const nav = document.querySelector('nav')
+const burger = document.querySelector('.burger')
+function toggleburger(e) {
+    nav.classList.toggle('open')
+    nav.classList.contains('open') ? body.style.overflow = 'hidden' : body.style.overflow = 'auto'
+}
+
+function navshow(e) {
+    window.scrollY > header.offsetHeight * 0.9 ? burger.classList.add('active') : burger.classList.remove('active')
+}
+
+window.addEventListener('scroll', navshow)
+
+//text translation - title
+
+function changeFonts(self, text) {
+    self.innerHTML = text
+}
+
+function changeFontsBack(self, text) {
+    self.innerHTML = text
+}
+
+//text translation - content
+
+const serviceContent = document.querySelector('.service>p')
+const goalContent = document.querySelector('.goal>p')
+
+serviceContent.addEventListener('mouseenter', () => {
+    serviceContent.innerHTML = `
+    獨特的價值，選對了光更能展露專屬的鋒芒。</br>
+    我們承載著各路人的期盼，提供上山下海的各式攝影服務。並為客戶客製化報價，以達到雙贏的最大效益。</br>
+    我們穩扎穩打，涵蓋企劃、設計、拍攝、後製 ，並有各行各業的合作團隊可配合。</br>
+    以真心相待，也總獲得最大的收穫。
+    `
+})
+
+serviceContent.addEventListener('mouseout', () => {
+    serviceContent.innerHTML = `
+    Unique value, choose the right light can show the exclusive edge.</br>
+    We carry the expectations of people from all walks of life, </br>
+    provide us with steady and steady progress, Covering planning, design,
+    shooting,post-production,</br>
+    and there are cooperation teams from all walks of life to cooperate.
+    `
+})
+
+goalContent.addEventListener('mouseover', () => {
+    goalContent.innerHTML = `
+    以客戶品牌內涵為要點，</br>
+    專注於建構專業形象涵蓋不同領域與產業，</br>
+    協助品牌行銷國際市場。
+    `
+})
+
+goalContent.addEventListener('mouseout', () => {
+    goalContent.innerHTML = `
+    Focusing on customer brand connotation,</br>
+    Focus on building a professional image covering different fields and industries,</br>
+    Assist brand marketing in international market.
+    `
+})
+
+//banner svg move
+
+const paths = document.querySelectorAll('header>svg>path')
+const polygons = document.querySelectorAll('header>svg>polygon')
+function bannerTextMove() {
+    if (window.scrollY < header.offsetHeight) {
+        paths.forEach(path => {
+            path.style.transform = `translate(0,${-Math.floor(Math.random() * 15) - window.scrollY}px)`
+        });
+
+        polygons.forEach(polygon => {
+            polygon.style.transform = `translate(0,${-Math.floor(Math.random() * 15) - window.scrollY}px)`
+        });
+    }
+}
+window.addEventListener('scroll', bannerTextMove)
+
+//profile img move
+const intro = document.querySelector('.intro')
+const profilePicLeft1 = document.querySelector('.profile_pic_left1')
+const profilePicLeft2 = document.querySelector('.profile_pic_left2')
+const profilePicLeft3 = document.querySelector('.profile_pic_left3')
+const profilePicRight = document.querySelector('.profile_pic_right')
+const profilePicCenter = document.querySelector('.profile_pic_center')
+
+function profileMove(){
+    if(window.scrollY > intro.offsetTop +intro.clientHeight/2 && window.scrollY < intro.offsetTop +intro.clientHeight*2){
+    var moveStart = window.scrollY - intro.offsetTop - intro.clientHeight/2
+    profilePicLeft1.style.left =  `${20.26-18*moveStart/intro.clientHeight/1.5}%`
+    profilePicLeft2.style.top = `${99.17-18.24*moveStart/intro.clientHeight/1.5}%`
+    profilePicLeft2.style.left  = `${28.85-11.57*moveStart/intro.clientHeight/1.5}%`
+    profilePicLeft3.style.left = `${19.11-12.03*moveStart/intro.clientHeight/1.5}%`
+    profilePicRight.style.top = `${50.56+32.87*moveStart/intro.clientHeight/1.5}%`
+    profilePicRight.style.left = `${59.79+15.42*moveStart/intro.clientHeight/1.5}%`
+    }
+}
+
+window.addEventListener('scroll', profileMove)
+
+//SVG animation
+const service = document.querySelector('.service')
+const goal = document.querySelector('.goal')
+const servicePath = document.querySelector('.service >svg>path')
+const goalPath = document.querySelector('.goal >svg>path')
+// const intro = document.querySelector('.intro')
+const photoPath = document.querySelector('.svg_photo>path')
+const graphyPath = document.querySelector('.svg_graphy>path')
+const studioPath = document.querySelector('.svg_studio>path')
+
+
+
+
+window.addEventListener('scroll',()=>{
+    if(scrollY>service.offsetTop){
+        servicePath.classList.add('svg_animation')
+    }
+    if(scrollY>goal.offsetTop){
+        goalPath.classList.add('svg_animation')
+    }
+
+    if(scrollY>intro.offsetTop){
+        photoPath.classList.add('svg_animation')
+        graphyPath.classList.add('svg_animation')
+        studioPath.classList.add('svg_animation')
+    }
+})

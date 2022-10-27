@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .imgs {
+        position: relative;
+        text-align: center;
+        height: 550px;
+        border: 1px solid black;
+    }
+
+    img {
+        position: absolute;
+        transition: 0.5s;
+    }
+
+    img:nth-child(1) {
+        transform: perspective(500px) translateZ(150px) translateY(150px);
+    }
+
+    img:nth-child(2) {
+        transform: perspective(500px) translateZ(100px) translateY(100px);
+    }
+
+    img:nth-child(3) {
+        transform: perspective(500px) translateZ(50px) translateY(50px);
+    }
+
+    img:nth-child(4) {
+        transform: perspective(500px) translateZ(0px) translateY(0px);
+        ;
+    }
+</style>
+
+<body>
+    <div class="imgs">
+        <img src="./catImg/cat1.jpg" style="height: 200px; width: 400px; z-index: 3;" alt="">
+        <img src="./catImg/cat2.jpg" style="height: 200px; width: 400px; z-index: 2;" alt="">
+        <img src="./catImg/cat3.jpg" style="height: 200px; width: 400px; z-index: 1;" alt="">
+        <img src="./catImg/cat4.jpg" style="height: 200px; width: 400px; z-index: 0;" alt="">
+    </div>
+
+    <script>
+        let imgbox = document.querySelector('.imgs')
+        let imgs = document.querySelectorAll('img')
+        imgbox.addEventListener('wheel', function (e) {
+            imgs.forEach(img => {
+                let indexZ =(Number(img.style.zIndex))
+            e.deltaY > 0 ? indexZ ++ : indexZ--
+            if(indexZ>3){indexZ=0}
+            img.style.zIndex >3 ? img.style.zIndex=0: img.style.zIndex=indexZ
+            img.style.transform=`perspective(500px) translateY(${indexZ*50}px) translateZ(${indexZ*50}px)`
+            console.log(indexZ,img.style.transform)
+            }
+            )
+        })
+
+    </script>
+</body>
+
+</html>

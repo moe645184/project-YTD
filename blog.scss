@@ -1,0 +1,82 @@
+@import '_var';
+
+@mixin font($ff: '標楷體', $minfz: 12px, $nowfz: 1.5vw, $maxfz: 64px, $fw: normal, $c: #000) {
+    font-family: $ff;
+    font-size: clamp($minfz, $nowfz, $maxfz);
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin picsize($minW, $nowW, $maxW) {
+    width: clamp($minW, $nowW, $maxW);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    body {
+        width: 100%;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        header {
+            height: 100vh;
+            position: relative;
+
+            h1 {
+                position: absolute;
+                left: 19.58%;
+                top: 29.72%;
+                @include font(didot, 50px, 11.46vw, 220px, 700, #000000);
+
+                span {
+                    position: absolute;
+                    z-index: 2;
+                    color: #fff;
+                }
+            }
+
+            .title_img {
+                position: absolute;
+                top: 0;
+                left: 44.9%;
+                @include picsize(123px, 36.72vw, 705px);
+            }
+
+            .deco_img {
+                position: absolute;
+                top: 55.93%;
+                left: 0;
+                @include picsize(59px, 16.67vw, 320px);
+            }
+
+                img { 
+                position: absolute;
+                left: 28.49%;
+                top: 86.48%;
+                    @include picsize(68px, 21.51vw, 413px);
+                }
+                .graphics_text{
+                    position: absolute;
+                    left: 52.86%;
+                    top: 86.48%;
+                    width: 23.125vw;
+                    h2{
+                        padding: 2.91vw 0;
+                        @include font(playfair,12px ,1.875vw ,36px ,bold ,#898989 )
+                    }
+                    p{
+                        @include font(hind,6.21px ,1.25vw ,24px ,400 , #000);
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+        main{
+            height: 300vh;
+
+        }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="網站的介紹">
+    <meta name="author" content="網站的作者">
+    <meta name="keyword" content="搜尋,關鍵字">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./211634_camera_icon.png">
+    <title>昨日攝影工作室- YT.D Photography Studio</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    header {
+        height: 100vh;
+        background-image: url(./catImg/cat3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding:1.5rem 0;
+        overflow: hidden;
+    }
+
+    header nav {
+        display: flex;
+        height: 5rem;
+        width: 100%;
+    }
+
+    header nav .logo {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    header nav ul {
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+
+    header nav ul a {
+        display: inline-block;
+        text-decoration: none;
+        margin-right: 3rem;
+    }
+
+    header .ham_bar {
+        position: absolute;
+        right: 1.5rem;
+        top: 4rem;
+        position: fixed;
+        z-index: 1;
+    }
+
+    header .ham_bar_close {
+        position: absolute;
+        right: 1.5rem;
+        top: 4rem;
+    }
+
+    header .ham_bar_page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #000;
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 2;
+    }
+
+    header .ham_bar_page.open {
+        height: 100vh;
+        color: white;
+    }
+
+    header .ham_bar_page img {
+        display: inline-block;
+        width: 150px;
+        height: 200px;
+    }
+
+    header .banner{
+        text-align: center;
+    }
+
+    main h1{
+        margin-top: 5rem;
+        text-align: center;
+        font-size: 50px;
+        color: silver;
+    }
+
+    main h1::after{
+        content: '/';
+        position: absolute;
+        margin-left: 2rem;
+        font-size: 60px;
+        transition: 0.5s;
+    }
+
+    main h1:hover::after{
+        transform: translate(-1rem,1rem);
+    }
+
+    main .work_word{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    main .work .work_pics{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10rem;
+        overflow: hidden;
+    } 
+
+    main .work .work_pics img:hover::after{
+        content: 'hi';
+    }
+
+    main .work .work_pics img:nth-child(1){
+        width: 25rem;
+        height: 25rem;
+    }
+
+    main .work .work_pics img:nth-child(2){
+        margin-top: 20rem;
+        width: 18rem;
+        height: 20rem;
+    }
+
+    main .work .work_pics img:nth-child(3){
+        width: 16rem;
+        height: 18rem;
+    }
+
+    .mouse_effect{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: grey;
+        text-align: center;
+        line-height: 3rem;
+        opacity: 0.5;
+        position: absolute;
+        display: none;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="./catImg/cat1.jpg" alt="LOGO">
+            <ul class="nav_list">
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="ham_bar" onclick="active()">menu</p>
+        <section class="ham_bar_page">
+            <img src="./catImg/cat2.jpg" alt="">
+            <p class="ham_bar_close" onclick="inactive()">X</p>
+            <ul>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <ul>
+                    <li><a href="#">社群1</a></li>
+                    <li><a href="#">社群2</a></li>
+                    <li><a href="#">社群3</a></li>
+                    <li><a href="#">社群4</a></li>
+                </ul>
+            </ul>
+        </section>
+
+        <section class="banner">
+            <video src="./652333414.mp4" width="100%" autoplay muted ></audio>
+        </section>
+    </header>
+    <main>
+        <section class="work">
+            <h1><a href="#">Work</a></h1>
+            <svg class="work_word" width="300" height="200">
+                <text x="100" y="190" stroke="#666" fill="silver" font-size="60">WORK</text>
+                <text x="50" y="190" stroke="#000" fill="#000" font-size="20" opacity="0.6">給我向量圖!給你超能力</text>
+            </svg>
+            <section class="work_pics">
+                <img src="./catImg/cat4.jpg" alt="">
+                <img src="./catImg/cat5.jpg" alt="">
+                <img src="./catImg/cat6.jpg" alt="">
+            </section>
+        </section>
+        <section class="profile">
+            <h1>profile</h1>
+            <section class="life_pics">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </section>
+        </section>
+        <div class="mouse_effect">view</div>
+    </main>
+    <footer>
+        <section class="cooperator"></section>
+        <small>copyright</small>
+    </footer>
+
+    <script>
+        const hamPage = document.querySelector('.ham_bar_page')
+        const hamBar = document.querySelector('ham_bar')
+        const hamBarClose = document.querySelector('ham_bar_close')
+        const imgs = document.querySelectorAll('img')
+        const mouseEffect = document.querySelector('.mouse_effect')
+
+        const active = () => {
+            hamPage.classList.add('open')
+        }
+        const inactive = () => {
+            hamPage.classList.remove('open')
+        }
+
+        const mouseFollow = (e)=>{
+            let left = e.clientX
+            let top = e.clientY + window.scrollY
+            console.log(left,top)
+            mouseEffect.style.display = 'block'
+            mouseEffect.style.left=left +'px'
+            mouseEffect.style.top=top +'px'
+        }
+
+        imgs.forEach(img => {
+            img.addEventListener('mousemove',mouseFollow)
+        });
+
+        imgs.forEach(img => {
+            img.addEventListener('mouseout',function(){
+                mouseEffect.style.display = 'none'
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

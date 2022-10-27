@@ -1,0 +1,12 @@
+@import '_var';
+
+@mixin font($ff:'標楷體',$minfz:12px,$nowfz:1.5vw,$maxfz:64px,$fw:normal,$c:#000) {
+    font-family: $ff;
+    font-size: clamp($minfz,$nowfz,$maxfz);
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin picsize($minW,$nowW,$maxW) {
+    width: clamp($minW,$nowW,$maxW);
+}

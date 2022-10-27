@@ -1,0 +1,433 @@
+@import '_var';
+
+@mixin font($ff: '標楷體', $minfz: 12px, $nowfz: 1.5vw, $maxfz: 64px, $fw: normal, $c: #000) {
+    font-family: $ff;
+    font-size: clamp($minfz, $nowfz, $maxfz);
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin picsize($minW, $nowW, $maxW) {
+    width: clamp($minW, $nowW, $maxW);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        header {
+            .burger {
+                position: fixed;
+                width: 100%;
+                justify-content: space-between;
+                transition: all 0.5s;
+                opacity: 0;
+                z-index: 3;
+
+                svg {
+                    position: absolute;
+                    top: 7.41vh;
+                    left: 4.8%;
+                }
+
+                .burger_btn_open {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 7.41vh;
+                    right: 4.53%;
+                    @include font('', 16px, 2.803vw, 40px, 500, #89898966)
+                }
+
+                nav {
+                    height: 0vh;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    background-color: #000;
+                    overflow: hidden;
+                    transition: all 1s;
+                    z-index: 2;
+
+                    &.open {
+                        height: 100vh;
+                    }
+
+                    p {
+                        @include font(didot, 11px, 1.25vw, 24px, 700, white);
+                        position: absolute;
+                        top: 8.98%;
+                        left: 7.86%;
+                        font-style: italic;
+                    }
+
+                    .nav_content {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+
+                        img {
+                            @include picsize(196.65px, 19.53vw, 375px);
+                            margin-right: 4.32%;
+                        }
+
+                        ul {
+                            list-style: none;
+                            font-style: italic;
+                            margin-left: 4.32%;
+
+                            li {
+                                margin: 1% 0;
+
+                                a {
+                                    text-decoration: none;
+                                    @include font(didot, 26px, 3.54vw, 68px, 400, white);
+                                }
+                            }
+                        }
+                    }
+
+                    .nav_btn_close {
+                        color: white;
+                        position: absolute;
+                        cursor: pointer;
+                        top: 83.4%;
+                        left: 89.58vw;
+                    }
+                }
+
+                .totop {
+                    position: fixed;
+                    right: 5%;
+                    bottom: 5%;
+                    text-decoration: none;
+                    @include font(playfair, 16px, 1.875vw, 36px, 600, #C6C4C4);
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+            .portfolio_banner {
+                height: 100vh;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    @include picsize(313px, 73.23vw, 1406px);
+                }
+            }
+
+            .portfolio_list {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+
+                li {
+                    @include font(playfair, 28px, 2.60vw, 50px, 600, #898989);
+                    margin-bottom: 2.19%;
+                    a{
+                        text-decoration: none;
+                        color: #898989;
+                    }
+                }
+            }
+        }
+
+        main {
+            .commercial {
+                .commercial_banner {
+                    height: 100vh;
+                    background-color: #484B574D;
+                    position: relative;
+
+                    h2 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
+                        font-style: italic;
+                    }
+                }
+
+                .commercial_portfolio {
+                    width: 100%;
+                    height: 900vh;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .portfolio_commercial_column {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        .item {
+                            position: relative;
+
+                            .show {
+                                object-fit: contain;
+                                width: 70%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 2;
+                            }
+
+                            .shadow {
+                                position: absolute;
+                                top: -10%;
+                                left: 3%;
+                                object-fit: contain;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 1;
+                                filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .portrait {
+                .portrait_banner {
+                    height: 100vh;
+                    background-color: #484B574D;
+                    position: relative;
+
+                    h2 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
+                        font-style: italic;
+                    }
+                }
+
+                .portrait_portfolio {
+                    width: 100%;
+                    height: 1400vh;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .portfolio_portrait_column {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        .item {
+                            position: relative;
+
+                            .show {
+                                object-fit: contain;
+                                width: 70%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 2;
+                            }
+
+                            .shadow {
+                                position: absolute;
+                                top: -10%;
+                                left: 3%;
+                                object-fit: contain;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 1;
+                                filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .selection {
+                .selection_banner {
+                    height: 100vh;
+                    background-color: #484B574D;
+                    position: relative;
+
+                    h2 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
+                        font-style: italic;
+                    }
+                }
+
+                .selection_portfolio {
+                    width: 100%;
+                    height: 700vh;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .portfolio_selection_column {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        .item {
+                            position: relative;
+
+                            .show {
+                                object-fit: contain;
+                                width: 70%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 2;
+                            }
+
+                            .shadow {
+                                position: absolute;
+                                top: -10%;
+                                left: 3%;
+                                object-fit: contain;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 1;
+                                filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .record {
+                .record_banner {
+                    height: 100vh;
+                    background-color: #484B574D;
+                    position: relative;
+
+                    h2 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
+                        font-style: italic;
+                    }
+                }
+
+                .record_portfolio {
+                    width: 100%;
+                    height: 200vh;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .portfolio_record_column {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        .item {
+                            position: relative;
+
+                            .show {
+                                object-fit: contain;
+                                width: 70%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 2;
+                            }
+
+                            .shadow {
+                                position: absolute;
+                                top: -10%;
+                                left: 3%;
+                                object-fit: contain;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 1;
+                                filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .film {
+                .film_banner {
+                    height: 100vh;
+                    background-color: #484B574D;
+                    position: relative;
+
+                    h2 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
+                        font-style: italic;
+                    }
+                }
+
+                .film_portfolio {
+                    width: 100%;
+                    height: 200vh;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .portfolio_film_column {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        .item {
+                            position: relative;
+                            video {
+                                width: 70%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 2;
+                            }
+                            .shadow {
+                                position: absolute;
+                                top: -10%;
+                                left: 3%;
+                                object-fit: contain;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 1;
+                                filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        footer{
+            height: 100vh;
+                p{
+                    line-height: 100vh;
+                    text-align: center;
+                    @include font(didot,20px ,5vw ,96px ,700 ,#0000004D );
+                    font-style: italic;
+                    
+                }
+        }
+    }
+}

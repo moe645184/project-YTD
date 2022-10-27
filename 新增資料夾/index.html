@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        cursor: url(./nat1021.cur), pointer;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .banner {
+        height: 100vh;
+        background-image: url(./banner.png);
+        background-size: cover;
+    }
+
+    .banner h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 100px;
+    }
+
+    .banner p {
+        position: absolute;
+        bottom: 5%;
+        color: white;
+        cursor: pointer;
+        font-size: 32px;
+    }
+
+    .banner_btn_reservation {
+        left: 5%;
+    }
+
+    .banner_btn_works {
+        right: 5%;
+    }
+
+    .hambur{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        justify-content: space-between;
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+    .hambur.active{
+        opacity: 1;
+    }
+
+    .hambur > p{
+        color: #ddd;
+        padding-top: 80px;
+        padding-left: 5%;
+        font-size: 26px;
+    }
+
+    .hambur_btn_open {
+        position: absolute;
+        font-size: 52px;
+        top: 80px;
+        right: 5%;
+        color: #ddd;
+    }
+
+    nav {
+        height: 0vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background-color: #000;
+        overflow: hidden;
+        transition:all 1s;
+    }
+
+    nav.open {
+        height: 100vh;
+    }
+
+    .hambur_btn_close {
+        position: absolute;
+        font-size: 32px;
+        right: 5%;
+        top: 80px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .hambur_logo {
+        color: white;
+        position: absolute;
+        top: 80px;
+        left: 5%;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    nav .wrap {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+
+    nav .wrap img {
+        width: 450px;
+        height: 600px;
+    }
+
+    nav ul {
+        color: white;
+        list-style: none;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+        font-size: 60px;
+    }
+
+    .hambur_btn_totop {
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        font-size: 32px;
+    }
+
+    .future {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .future h2 {
+        margin-bottom: 60%;
+        font-size: 52px;
+        text-align: center;
+        color: #ccc;
+    }
+
+    .future h2::after {
+        content: "________";
+    }
+
+    .future h3 {
+        font-size: 36px;
+    }
+
+    .future p{
+        font-size: 24px;
+    }
+
+    .future img {
+        width: 600px;
+    }
+
+    .life {
+        height: 100vh;
+    }
+
+    .life h2 {
+        padding: 3%;
+        font-size: 52px;
+        text-align: center;
+    }
+
+    .life h2::before {
+        content: "________";
+    }
+
+    .life_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .life h3{
+        font-size: 36px;
+    }
+
+    .life p{
+        font-size: 24px;
+    }
+
+    .life img {
+        height: 650px;;
+    }
+
+    .life_text {
+        flex: 1;
+        text-align: center;
+    }
+
+    .intro {
+        height: 100vh;
+    }
+
+    .intro svg {
+        height: 130px;
+    }
+
+    .intro_text {
+        width: 50%;
+        margin-left: 50%;
+        margin-top: 10%;
+    }
+
+    .profile {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile img {
+        height: 200px;
+    }
+
+    .profile_img_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+    }
+
+    .profile_img_left :nth-child(1) {
+        transform: translate(25%, 0);
+    }
+
+    .profile_img_left :nth-child(2) {
+        transform: translate(100%, 0);
+        z-index: 2;
+    }
+
+    .profile_img_left :nth-child(3) {
+        transform: translate(25%, 0);
+    }
+
+    .profile_img_center {
+        z-index: 1;
+    }
+
+    .profile_img_right {
+        transform: translate(-50%,-100%);
+    }
+
+    .cooperative {
+        line-height: 50px;
+        padding: 12.5% 0;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .cooperative_wrap {
+        height: 50vh;
+        background-color: #ccc;
+    }
+
+    .cooperative_imgwrap {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .cooperative_imgwrap>img {
+        width: 250px;
+    }
+
+    .cooperative_logos {
+        width: 160px;
+    }
+
+    .cooperative_logos img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact {
+        height: 100vh;
+    }
+
+    .contact h2 {
+        padding: 5% 0;
+        height: 10%;
+        text-align: center;
+    }
+
+    .contact h2::before {
+        content: "_____";
+    }
+
+    .contact h2::after {
+        content: "_____";
+    }
+
+    .contact_wrap {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contact ul {
+        padding: 10% 0 0 0;
+    }
+
+    .contact form {
+        display: flex;
+        flex-direction: column;
+        align-items: space-evenly;
+        line-height: 50px;
+        width: 40%;
+    }
+
+    .contact label {
+        border: 3px solid grey;
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    .contact input {
+        height: 95%;
+        width: 85%;
+        border: none;
+    }
+
+    .contact p {
+        text-align: center;
+    }
+
+    .contact_btn_submit {
+        width: 20%;
+        padding: 10px;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #eee;
+    }
+
+    hr {
+        margin-left: 50%;
+        height: 20vh;
+        width:5px;
+        border-width: 0;
+        background-color: #ddd;
+    }
+
+    footer {
+        padding: 3%;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <header>
+        <section class="banner">
+            <h1>YesTerDay</br>photography</br>studio</h1>
+            <p class="banner_btn_reservation">RESERVATION</p>
+            <p class="banner_btn_works">WORKS</p>
+        </section>
+    </header>
+    <main>
+        <div class="hambur">
+            <p>YT.D Photography studio</p>
+            <div class="hambur_btn_open" onclick="toggleburger()">≡</div>
+            <nav>
+                <div class="hambur_logo">YT.D Photography studio</div>
+                <p class="hambur_btn_close" onclick="toggleburger()">close ╳</p>
+                <div class="wrap">
+                    <img src="./nav_img.png" alt="nav-pic">
+                    <ul>
+                        <li>Profile</li>
+                        <li>About us</li>
+                        <li>Reservation</li>
+                        <li>Contact us</li>
+                    </ul>
+                </div>
+            </nav>
+            <p class="hambur_btn_totop">Top</p>
+        </div>
+        <section class="future">
+            <div class="future_text">
+                <h2>FUTURE</h2>
+                <h3>YesTerDay Photography Studio .....</h3>
+                <p>Stand by wedding company and advertising company.</br>
+                    Now i'm a interior design photographer.</br>
+                    Like to create different pic.</br>
+                    If you want to take a pic by reciprocity,</br>
+                    I will very welcome to work togather in future.</p>
+            </div>
+            <img src="./future_img.jfif" alt="future_picture">
+        </section>
+        <section class="life">
+            <h2>LIFE</h2>
+            <article class="life_content">
+                <img src="./life_img.jfif" alt="life_picture">
+                <article class="life_text">
+                    <h3>YesTerDay Photography  Studio .....</h3>
+                    <p>Stand by wedding company and advertising company.</br>
+                        Now i'm a interior design photographer.</br>
+                        Like to create different pic.</br>
+                        If you want to take a pic by reciprocity,</br>
+                        I will very welcome to work togather in future.</p>
+                </article>
+            </article>
+        </section>
+        <section class="intro">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 727 150" width="727" height="150"
+                class="intro_svg_photography">
+                <path
+                    d="M168.8,4.79q9,0,15-.6v4Q172.6,10.8,168,25.59l-37.8,121.2H127l-34.8-103-31.8,103H57.2L14.8,21Q10.6,8.6,1,8.19v-4q8.21.6,21.4.6,14.4,0,21.6-.6v4q-5.4.41-7.6,2a5.77,5.77,0,0,0-2.2,5q0,3.21,2.2,9.8l29.2,89.2L90,36.79,84.6,21Q80.6,8.6,72.8,8.19v-4q7.2.6,19.4.6,17.2,0,25.6-.6v4q-7.6.41-10.6,1.7t-3,5.5a32.17,32.17,0,0,0,2,9.6L135,114l24.6-77.4q3.19-9.8,3.2-16.2,0-6.6-4-9.3t-13-2.9v-4Q157.2,4.79,168.8,4.79Zm95.8-3.4q19,0,33.3,8.6t22.2,24.9q7.9,16.3,7.9,38.9,0,22-8.1,39t-22.6,26.4a59.09,59.09,0,0,1-32.9,9.4q-19,0-33.3-8.6t-22.2-24.9Q201,98.8,201,76.19q0-22,8.1-39t22.6-26.4A59.26,59.26,0,0,1,264.6,1.39ZM263.8,5a32.3,32.3,0,0,0-22.5,8.9q-9.7,8.91-15,24.9T221,75.39q0,20.81,5.9,36.6t15.9,24.4a33.46,33.46,0,0,0,22.4,8.6,32.21,32.21,0,0,0,22.5-8.9q9.71-8.9,15-24.9t5.3-36.6q0-20.79-5.9-36.6t-15.9-24.4A33.51,33.51,0,0,0,263.8,5ZM479,135.79q-4.61,6.81-9.2,9.8t-12.2,3q-8.21,0-13.5-4.8T436.2,127l-4.4-20a134.74,134.74,0,0,0-4.5-16,20.66,20.66,0,0,0-6.3-9q-4.2-3.39-11.8-3.4h-19v46q0,7.6,1.2,11a7.18,7.18,0,0,0,4.5,4.6q3.3,1.2,10.5,1.6v4q-9.19-.6-25.4-.6-17.21,0-25.6.6v-4q7.2-.39,10.5-1.6a7.18,7.18,0,0,0,4.5-4.6q1.2-3.39,1.2-11V25.39q0-7.59-1.2-11a7.2,7.2,0,0,0-4.5-4.6q-3.3-1.2-10.5-1.6v-4q8.4.6,24.4.6l21.6-.2q3.8-.2,8.6-.2,23.21,0,35.7,9.7t12.5,25.1a36.79,36.79,0,0,1-3.7,15.7q-3.71,7.9-12.4,14.2t-22.7,8.5l2.4.4q13.2,2.2,19.2,8t8.8,18.4l5,20.4q2,9.21,4.2,12.8a6.72,6.72,0,0,0,6,3.6,8.93,8.93,0,0,0,5.7-1.8,31.4,31.4,0,0,0,5.3-5.8ZM405,8.19q-6.19,0-9.3,1.4a8,8,0,0,0-4.3,5q-1.2,3.6-1.2,10.8v49.2h13.4q19.8,0,27.2-8.8t7.4-24.4q0-16.39-7.8-24.8T405,8.19Zm194.8,121.4a30.64,30.64,0,0,0,7.5,7.9,28.36,28.36,0,0,0,10.1,4.3v4q-9.6-.6-24-.6-10.8,0-20.6.6v-4a19.86,19.86,0,0,0,7-1.2,3.2,3.2,0,0,0,2.2-3,8.89,8.89,0,0,0-2-4.8l-29.2-44Q545,80,541,77.29t-11.2-3.1v50.4q0,7.6,1.2,11a7.18,7.18,0,0,0,4.5,4.6q3.3,1.2,10.5,1.6v4q-9.19-.6-25.4-.6-17.21,0-25.6.6v-4q7.2-.39,10.5-1.6a7.18,7.18,0,0,0,4.5-4.6q1.2-3.39,1.2-11V25.39q0-7.59-1.2-11a7.2,7.2,0,0,0-4.5-4.6q-3.3-1.2-10.5-1.6v-4q8.4.6,25.6.6,16,0,25.4-.6v4q-7.2.41-10.5,1.6a7.2,7.2,0,0,0-4.5,4.6q-1.2,3.41-1.2,11v44.8q14.6-.6,22.8-11.2l19.2-24.4Q582,22,582,15.39q0-7-12.4-7.2v-4q11.4.6,23,.6,11,0,17-.6v4a36,36,0,0,0-12.4,4.3A38.91,38.91,0,0,0,586,22.79l-32.6,41.8ZM678.8,2q8.81,0,13.9,1.9a52,52,0,0,1,10.5,5.5q4.39,2.81,6.8,2.8a3.07,3.07,0,0,0,2.8-2.1,24.1,24.1,0,0,0,1.6-6.7H719q-1,11.61-1,40.8h-4.6q-1.2-16.2-9.3-27.3T680.6,5.79q-10.8,0-17.6,6.5T656.2,29a24.39,24.39,0,0,0,3.5,13.2,34.66,34.66,0,0,0,8.9,9.6Q674,55.8,684,62l5.8,3.6a202.31,202.31,0,0,1,19.9,13.7,48.66,48.66,0,0,1,11.7,13.5,34.84,34.84,0,0,1,4.4,17.8q0,18.21-12,28.1t-30.4,9.9a51.11,51.11,0,0,1-15.7-2,55.64,55.64,0,0,1-11.7-5.4c-2.93-1.86-5.2-2.8-6.8-2.8a3.1,3.1,0,0,0-2.8,2.1,24.18,24.18,0,0,0-1.6,6.7h-4.6q.79-11,.8-48h4.6q1.39,20.2,10,32.8t26.4,12.6a26.81,26.81,0,0,0,18.4-6.7Q708,131.2,708,118a26.4,26.4,0,0,0-7.5-19q-7.5-7.8-23.7-17.6a220,220,0,0,1-19.1-12.8,45.93,45.93,0,0,1-11.9-13.5,36.14,36.14,0,0,1-4.6-18.5q0-16.8,10.8-25.7T678.8,2Z" />
+                </br>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 727 150" width="727" height="150"
+                class="intro_svg_studio">
+                <path
+                    d="M168.8,4.79q9,0,15-.6v4Q172.6,10.8,168,25.59l-37.8,121.2H127l-34.8-103-31.8,103H57.2L14.8,21Q10.6,8.6,1,8.19v-4q8.21.6,21.4.6,14.4,0,21.6-.6v4q-5.4.41-7.6,2a5.77,5.77,0,0,0-2.2,5q0,3.21,2.2,9.8l29.2,89.2L90,36.79,84.6,21Q80.6,8.6,72.8,8.19v-4q7.2.6,19.4.6,17.2,0,25.6-.6v4q-7.6.41-10.6,1.7t-3,5.5a32.17,32.17,0,0,0,2,9.6L135,114l24.6-77.4q3.19-9.8,3.2-16.2,0-6.6-4-9.3t-13-2.9v-4Q157.2,4.79,168.8,4.79Zm95.8-3.4q19,0,33.3,8.6t22.2,24.9q7.9,16.3,7.9,38.9,0,22-8.1,39t-22.6,26.4a59.09,59.09,0,0,1-32.9,9.4q-19,0-33.3-8.6t-22.2-24.9Q201,98.8,201,76.19q0-22,8.1-39t22.6-26.4A59.26,59.26,0,0,1,264.6,1.39ZM263.8,5a32.3,32.3,0,0,0-22.5,8.9q-9.7,8.91-15,24.9T221,75.39q0,20.81,5.9,36.6t15.9,24.4a33.46,33.46,0,0,0,22.4,8.6,32.21,32.21,0,0,0,22.5-8.9q9.71-8.9,15-24.9t5.3-36.6q0-20.79-5.9-36.6t-15.9-24.4A33.51,33.51,0,0,0,263.8,5ZM479,135.79q-4.61,6.81-9.2,9.8t-12.2,3q-8.21,0-13.5-4.8T436.2,127l-4.4-20a134.74,134.74,0,0,0-4.5-16,20.66,20.66,0,0,0-6.3-9q-4.2-3.39-11.8-3.4h-19v46q0,7.6,1.2,11a7.18,7.18,0,0,0,4.5,4.6q3.3,1.2,10.5,1.6v4q-9.19-.6-25.4-.6-17.21,0-25.6.6v-4q7.2-.39,10.5-1.6a7.18,7.18,0,0,0,4.5-4.6q1.2-3.39,1.2-11V25.39q0-7.59-1.2-11a7.2,7.2,0,0,0-4.5-4.6q-3.3-1.2-10.5-1.6v-4q8.4.6,24.4.6l21.6-.2q3.8-.2,8.6-.2,23.21,0,35.7,9.7t12.5,25.1a36.79,36.79,0,0,1-3.7,15.7q-3.71,7.9-12.4,14.2t-22.7,8.5l2.4.4q13.2,2.2,19.2,8t8.8,18.4l5,20.4q2,9.21,4.2,12.8a6.72,6.72,0,0,0,6,3.6,8.93,8.93,0,0,0,5.7-1.8,31.4,31.4,0,0,0,5.3-5.8ZM405,8.19q-6.19,0-9.3,1.4a8,8,0,0,0-4.3,5q-1.2,3.6-1.2,10.8v49.2h13.4q19.8,0,27.2-8.8t7.4-24.4q0-16.39-7.8-24.8T405,8.19Zm194.8,121.4a30.64,30.64,0,0,0,7.5,7.9,28.36,28.36,0,0,0,10.1,4.3v4q-9.6-.6-24-.6-10.8,0-20.6.6v-4a19.86,19.86,0,0,0,7-1.2,3.2,3.2,0,0,0,2.2-3,8.89,8.89,0,0,0-2-4.8l-29.2-44Q545,80,541,77.29t-11.2-3.1v50.4q0,7.6,1.2,11a7.18,7.18,0,0,0,4.5,4.6q3.3,1.2,10.5,1.6v4q-9.19-.6-25.4-.6-17.21,0-25.6.6v-4q7.2-.39,10.5-1.6a7.18,7.18,0,0,0,4.5-4.6q1.2-3.39,1.2-11V25.39q0-7.59-1.2-11a7.2,7.2,0,0,0-4.5-4.6q-3.3-1.2-10.5-1.6v-4q8.4.6,25.6.6,16,0,25.4-.6v4q-7.2.41-10.5,1.6a7.2,7.2,0,0,0-4.5,4.6q-1.2,3.41-1.2,11v44.8q14.6-.6,22.8-11.2l19.2-24.4Q582,22,582,15.39q0-7-12.4-7.2v-4q11.4.6,23,.6,11,0,17-.6v4a36,36,0,0,0-12.4,4.3A38.91,38.91,0,0,0,586,22.79l-32.6,41.8ZM678.8,2q8.81,0,13.9,1.9a52,52,0,0,1,10.5,5.5q4.39,2.81,6.8,2.8a3.07,3.07,0,0,0,2.8-2.1,24.1,24.1,0,0,0,1.6-6.7H719q-1,11.61-1,40.8h-4.6q-1.2-16.2-9.3-27.3T680.6,5.79q-10.8,0-17.6,6.5T656.2,29a24.39,24.39,0,0,0,3.5,13.2,34.66,34.66,0,0,0,8.9,9.6Q674,55.8,684,62l5.8,3.6a202.31,202.31,0,0,1,19.9,13.7,48.66,48.66,0,0,1,11.7,13.5,34.84,34.84,0,0,1,4.4,17.8q0,18.21-12,28.1t-30.4,9.9a51.11,51.11,0,0,1-15.7-2,55.64,55.64,0,0,1-11.7-5.4c-2.93-1.86-5.2-2.8-6.8-2.8a3.1,3.1,0,0,0-2.8,2.1,24.18,24.18,0,0,0-1.6,6.7h-4.6q.79-11,.8-48h4.6q1.39,20.2,10,32.8t26.4,12.6a26.81,26.81,0,0,0,18.4-6.7Q708,131.2,708,118a26.4,26.4,0,0,0-7.5-19q-7.5-7.8-23.7-17.6a220,220,0,0,1-19.1-12.8,45.93,45.93,0,0,1-11.9-13.5,36.14,36.14,0,0,1-4.6-18.5q0-16.8,10.8-25.7T678.8,2Z" />
+            </svg>
+            <div class="intro_text">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 727 150" width="727" height="150"
+                    class="intro_svg_studio">
+                    <path
+                        d="M168.8,4.79q9,0,15-.6v4Q172.6,10.8,168,25.59l-37.8,121.2H127l-34.8-103-31.8,103H57.2L14.8,21Q10.6,8.6,1,8.19v-4q8.21.6,21.4.6,14.4,0,21.6-.6v4q-5.4.41-7.6,2a5.77,5.77,0,0,0-2.2,5q0,3.21,2.2,9.8l29.2,89.2L90,36.79,84.6,21Q80.6,8.6,72.8,8.19v-4q7.2.6,19.4.6,17.2,0,25.6-.6v4q-7.6.41-10.6,1.7t-3,5.5a32.17,32.17,0,0,0,2,9.6L135,114l24.6-77.4q3.19-9.8,3.2-16.2,0-6.6-4-9.3t-13-2.9v-4Q157.2,4.79,168.8,4.79Zm95.8-3.4q19,0,33.3,8.6t22.2,24.9q7.9,16.3,7.9,38.9,0,22-8.1,39t-22.6,26.4a59.09,59.09,0,0,1-32.9,9.4q-19,0-33.3-8.6t-22.2-24.9Q201,98.8,201,76.19q0-22,8.1-39t22.6-26.4A59.26,59.26,0,0,1,264.6,1.39ZM263.8,5a32.3,32.3,0,0,0-22.5,8.9q-9.7,8.91-15,24.9T221,75.39q0,20.81,5.9,36.6t15.9,24.4a33.46,33.46,0,0,0,22.4,8.6,32.21,32.21,0,0,0,22.5-8.9q9.71-8.9,15-24.9t5.3-36.6q0-20.79-5.9-36.6t-15.9-24.4A33.51,33.51,0,0,0,263.8,5ZM479,135.79q-4.61,6.81-9.2,9.8t-12.2,3q-8.21,0-13.5-4.8T436.2,127l-4.4-20a134.74,134.74,0,0,0-4.5-16,20.66,20.66,0,0,0-6.3-9q-4.2-3.39-11.8-3.4h-19v46q0,7.6,1.2,11a7.18,7.18,0,0,0,4.5,4.6q3.3,1.2,10.5,1.6v4q-9.19-.6-25.4-.6-17.21,0-25.6.6v-4q7.2-.39,10.5-1.6a7.18,7.18,0,0,0,4.5-4.6q1.2-3.39,1.2-11V25.39q0-7.59-1.2-11a7.2,7.2,0,0,0-4.5-4.6q-3.3-1.2-10.5-1.6v-4q8.4.6,24.4.6l21.6-.2q3.8-.2,8.6-.2,23.21,0,35.7,9.7t12.5,25.1a36.79,36.79,0,0,1-3.7,15.7q-3.71,7.9-12.4,14.2t-22.7,8.5l2.4.4q13.2,2.2,19.2,8t8.8,18.4l5,20.4q2,9.21,4.2,12.8a6.72,6.72,0,0,0,6,3.6,8.93,8.93,0,0,0,5.7-1.8,31.4,31.4,0,0,0,5.3-5.8ZM405,8.19q-6.19,0-9.3,1.4a8,8,0,0,0-4.3,5q-1.2,3.6-1.2,10.8v49.2h13.4q19.8,0,27.2-8.8t7.4-24.4q0-16.39-7.8-24.8T405,8.19Zm194.8,121.4a30.64,30.64,0,0,0,7.5,7.9,28.36,28.36,0,0,0,10.1,4.3v4q-9.6-.6-24-.6-10.8,0-20.6.6v-4a19.86,19.86,0,0,0,7-1.2,3.2,3.2,0,0,0,2.2-3,8.89,8.89,0,0,0-2-4.8l-29.2-44Q545,80,541,77.29t-11.2-3.1v50.4q0,7.6,1.2,11a7.18,7.18,0,0,0,4.5,4.6q3.3,1.2,10.5,1.6v4q-9.19-.6-25.4-.6-17.21,0-25.6.6v-4q7.2-.39,10.5-1.6a7.18,7.18,0,0,0,4.5-4.6q1.2-3.39,1.2-11V25.39q0-7.59-1.2-11a7.2,7.2,0,0,0-4.5-4.6q-3.3-1.2-10.5-1.6v-4q8.4.6,25.6.6,16,0,25.4-.6v4q-7.2.41-10.5,1.6a7.2,7.2,0,0,0-4.5,4.6q-1.2,3.41-1.2,11v44.8q14.6-.6,22.8-11.2l19.2-24.4Q582,22,582,15.39q0-7-12.4-7.2v-4q11.4.6,23,.6,11,0,17-.6v4a36,36,0,0,0-12.4,4.3A38.91,38.91,0,0,0,586,22.79l-32.6,41.8ZM678.8,2q8.81,0,13.9,1.9a52,52,0,0,1,10.5,5.5q4.39,2.81,6.8,2.8a3.07,3.07,0,0,0,2.8-2.1,24.1,24.1,0,0,0,1.6-6.7H719q-1,11.61-1,40.8h-4.6q-1.2-16.2-9.3-27.3T680.6,5.79q-10.8,0-17.6,6.5T656.2,29a24.39,24.39,0,0,0,3.5,13.2,34.66,34.66,0,0,0,8.9,9.6Q674,55.8,684,62l5.8,3.6a202.31,202.31,0,0,1,19.9,13.7,48.66,48.66,0,0,1,11.7,13.5,34.84,34.84,0,0,1,4.4,17.8q0,18.21-12,28.1t-30.4,9.9a51.11,51.11,0,0,1-15.7-2,55.64,55.64,0,0,1-11.7-5.4c-2.93-1.86-5.2-2.8-6.8-2.8a3.1,3.1,0,0,0-2.8,2.1,24.18,24.18,0,0,0-1.6,6.7h-4.6q.79-11,.8-48h4.6q1.39,20.2,10,32.8t26.4,12.6a26.81,26.81,0,0,0,18.4-6.7Q708,131.2,708,118a26.4,26.4,0,0,0-7.5-19q-7.5-7.8-23.7-17.6a220,220,0,0,1-19.1-12.8,45.93,45.93,0,0,1-11.9-13.5,36.14,36.14,0,0,1-4.6-18.5q0-16.8,10.8-25.7T678.8,2Z" />
+                </svg>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus hic maiores nobis praesentium
+                    ea
+                    quisquam, itaque quam excepturi veritatis quae atque architecto dolorem repudiandae tenetur quo eum.
+                    Eos, dolorem fugit.</p>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="profile_img_left">
+                <img src="./profile_lefttop.jfif" alt="">
+                <img src="./profile_leftcenter.jfif" alt="">
+                <img src="./profile_leftdown.jfif" alt="">
+            </div>
+            <div class="profile_img_center">
+                <img style="height: 650px;" src="./profile_center.png" alt="">
+            </div>
+            <div class="profile_img_right">
+                <img style="height:250px" src="./profile_right.jfif" alt="">
+            </div>
+        </section>
+        <section class="cooperative">
+            <div class="cooperative_wrap">
+                <h2>Cooperative partner</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="cooperative_imgwrap">
+                    <img src="./catImg/cat3.jpg" alt="">
+                    <div class="cooperative_logos">
+                        <img src="./catImg/cat4.jpg" alt="">
+                        <img src="./catImg/cat4.jpg" alt="">
+                        <img src="./catImg/cat4.jpg" alt="">
+                        <img src="./catImg/cat4.jpg" alt="">
+                        <img src="./catImg/cat4.jpg" alt="">
+                        <img src="./catImg/cat4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>CONTACT</h2>
+            <div class="contact_wrap">
+                <div class="contact_text">
+                    <p>1F., No. 11, Ln. 138, Wenhua Rd., Xitun Dist., Taichung City, Taiwan (R.O.C.)</p>
+                    <p>Come say hello at our office. Twenty four seven.</p>
+                    <ul>
+                        <li>E-mail：yt.d.photo@gmail.com</li>
+                        <li>Instagram：yt.d.studio</li>
+                        <li>LINE：yt.d.studio</li>
+                    </ul>
+                    <img src="./line.png" alt="">
+                    <img src="./ig.png" alt="">
+                </div>
+                <form>
+                    <label>NAME | <input type="text" placeholder="請輸入您的名字"></label>
+                    <label>PHONE | <input type="text" placeholder="請輸入您的電話"></label>
+                    <label>EMAIL | <input type="text" placeholder="請輸入您的電子郵件"></label>
+                    <label>HOW CAN WE HELP ?
+                        <textarea style="border:none;"></textarea>
+                    </label>
+                    <p>We’d love to hear from you. Our friendly team is always here to chat.</p>
+                    <button class="contact_btn_submit">SendMessage</button>
+                </form>
+            </div>
+        </section>
+        <hr>
+    </main>
+    <footer>
+        <small>Copyright © YesTerDay studio All rights reserved.</small>
+    </footer>
+
+    <script>
+        const header = document.querySelector('header')
+        const nav = document.querySelector('nav')
+        const hambur = document.querySelector('.hambur')
+        function toggleburger(){
+            nav.classList.toggle('open')
+        }
+        
+        function navshow(e){
+            console.log(header.offsetHeight)
+            window.scrollY >header.offsetHeight * 0.4 ?hambur.classList.add('active'):hambur.classList.remove('active')
+            }
+        
+
+        window.addEventListener('scroll',navshow)
+
+
+    </script>
+</body>
+
+</html>

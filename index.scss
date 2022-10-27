@@ -1,0 +1,612 @@
+@import '_var';
+
+// --mixin--
+@mixin font($ff: '標楷體', $minfz: 12px, $nowfz: 1.5vw, $maxfz: 64px, $fw: normal, $c: #000) {
+    font-family: $ff;
+    font-size: clamp($minfz, $nowfz, $maxfz);
+    font-weight: $fw;
+    color: $c;
+}
+
+
+@mixin picsize($minW, $nowW, $maxW) {
+    width: clamp($minW, $nowW, $maxW);
+}
+
+// -- mixin end --
+
+// -- animation --
+
+@keyframes textshow {
+    0% {
+        transform: rotateY(270deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(360deg)
+    }
+}
+
+@keyframes svgshow {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes svgshow2 {
+    60% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke: none;
+        fill:#000;
+    }
+}
+
+// -- animation end --
+
+// -- 1920 --
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        header {
+            height: 100vh;
+            position: relative;
+
+            .burger {
+                position: fixed;
+                width: 100%;
+                justify-content: space-between;
+                transition: all 0.5s;
+                opacity: 0;
+                z-index: 2;
+
+                svg {
+                    position: absolute;
+                    top: 7.41vh;
+                    left: 4.8%;
+                }
+
+                .burger_btn_open {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 7.41vh;
+                    right: 4.53%;
+                    @include font('', 16px, 2.803vw, 40px, 500, #89898966)
+                }
+
+                nav {
+                    height: 0vh;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    background-color: #000;
+                    overflow: hidden;
+                    transition: all 1s;
+                    z-index: 2;
+
+                    &.open {
+                        height: 100vh;
+                    }
+
+                    p {
+                        @include font(didot, 11px, 1.25vw, 24px, 700, white);
+                        position: absolute;
+                        top: 8.98%;
+                        left: 7.86%;
+                        font-style: italic;
+                    }
+
+                    .nav_content {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+
+                        img {
+                            @include picsize(196.65px, 19.53vw, 375px);
+                            margin-right: 4.32%;
+                        }
+
+                        ul {
+                            list-style: none;
+                            font-style: italic;
+                            margin-left: 4.32%;
+
+                            li {
+                                margin: 1% 0;
+
+                                a {
+                                    text-decoration: none;
+                                    @include font(didot, 26px, 3.54vw, 68px, 400, white);
+                                }
+                            }
+                        }
+                    }
+
+                    .nav_btn_close {
+                        color: white;
+                        position: absolute;
+                        cursor: pointer;
+                        top: 83.4%;
+                        left: 89.58vw;
+                    }
+                }
+
+                .totop {
+                    position: fixed;
+                    right: 5%;
+                    bottom: 5%;
+                    text-decoration: none;
+                    @include font(playfair, 16px, 1.875vw, 36px, 600, #C6C4C4);
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+
+            video {
+                height: 100vh;
+                width: 100%;
+                background-color: #000;
+            }
+
+            &>svg {
+                position: absolute;
+                height: 800px;
+                opacity: 0;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                @include picsize(352px, 60.47vw, 1161px);
+                animation: textshow 2s linear 1 forwards;
+            }
+
+            .header_btn_reservation {
+                @include font(hind, 12px, 1.25vw, 24px, 500, #FFFFFFCC);
+                position: absolute;
+                top: 84.5%;
+                left: 12.5%;
+                opacity: 0;
+                animation: textshow 2s linear 1s 1 forwards;
+                text-decoration: none;
+            }
+
+            .header_btn_portfolio {
+                @include font(hind, 12px, 1.25vw, 24px, 500, #FFFFFFCC);
+                position: absolute;
+                top: 84.5%;
+                right: 12.5%;
+                opacity: 0;
+                animation: textshow 2s linear 1s 1 forwards;
+                text-decoration: none;
+            }
+        }
+
+        main {
+            .service {
+                position: relative;
+                height: 100vh;
+                overflow: hidden;
+
+                h2 {
+                    position: absolute;
+                    left: 17.19%;
+                    top: 10.28%;
+                    @include font(didot, 28px, 2.708vw, 52px, 400, #898989E5);
+
+                    &::after {
+                        content: '_____';
+                    }
+                }
+
+                svg {
+                    position: absolute;
+                    top: 39.72%;
+                    left: 9.79%;
+                    width: clamp(250px, 40.21vw, 772px);
+
+                    path {
+                        stroke-dasharray: 1160;
+                        stroke-dashoffset: 1160;
+                        // animation: svgshow 5s ease-out forwards;
+                        stroke: #666;
+
+                        &.svg_animation {
+                            animation: svgshow 5s ease-out forwards;
+                        }
+                    }
+                }
+
+                h3 {
+                    position: absolute;
+                    top: 68.06%;
+                    left: 13.7%;
+                    @include font(playfair, 16px, 1.875vw, 36px, 600, #000000);
+                }
+
+                p {
+                    position: absolute;
+                    top: 77.31%;
+                    left: 13.05%;
+                    @include font(hind, 10px, 1.25vw, 24px, 400, #000000)
+                }
+
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    @include picsize(300px, 91%, 883px);
+                }
+            }
+
+            .goal {
+                position: relative;
+                height: 100vh;
+
+                img {
+                    position: absolute;
+                    top: 10%;
+                    @include picsize(178px, 49.94vw, 959px);
+
+                }
+
+
+                h2 {
+                    position: absolute;
+                    top: 19.9%;
+                    left: 76.9%;
+                    @include font(didot, 28px, 2.708vw, 52px, 400, #898989E5);
+
+                    &::before {
+                        content: '_____';
+                    }
+                }
+
+                svg {
+                    position: absolute;
+                    top: 37.87%;
+                    left: 45.47%;
+                    width: clamp(178px, 25.57vw, 491px);
+
+                    path {
+                        stroke-dasharray: 1160;
+                        stroke-dashoffset: 1160;
+                        stroke: #666;
+
+                        &.svg_animation {
+                            animation: svgshow 5s ease-out forwards;
+                        }
+                    }
+                }
+
+                h3 {
+                    position: absolute;
+                    top: 66.02%;
+                    left: 56.93%;
+                    @include font(playfair, 10px, 1.875vw, 36px, 600, #000000);
+                }
+
+                p {
+                    position: absolute;
+                    top: 74.35%;
+                    left: 56.93%;
+                    @include font(hind, 10px, 1.25vw, 24px, 400, #000000);
+                }
+            }
+
+            .intro {
+                height: 100vh;
+                position: relative;
+
+                .svg_photo {
+                    position: absolute;
+                    top: 48.33%;
+                    left: 0.73%;
+                    width: clamp(352px, 58.85vw, 1130px);
+                    path {
+                        stroke-dasharray: 1160;
+                        stroke-dashoffset: 1160;
+                        stroke: #666;
+
+                        &.svg_animation {
+                            animation: svgshow2 5s ease-out forwards;
+                        }
+                    }
+                    
+                }
+
+                .svg_graphy {
+                    position: absolute;
+                    top: 65.46%;
+                    left: 3.85%;
+                    width: clamp(352px, 69.01vw, 1325px);
+                    path {
+                        stroke-dasharray: 1160;
+                        stroke-dashoffset: 1160;
+                        stroke: #666;
+
+                        &.svg_animation {
+                            animation: svgshow2 5s ease-out forwards;
+                        }
+                    }
+                }
+            }
+
+            .profile {
+                height: 100vh;
+
+                .profile_wrap {
+                    position: relative;
+                    height: 56.25vw;
+                    width: 100vw;
+
+                    .svg_studio {
+                        position: absolute;
+                        top: 0.56%;
+                        left: 50.52%;
+                        width: clamp(252px, 48.75vw, 936px);
+                        path {
+                            stroke-dasharray: 1160;
+                            stroke-dashoffset: 1160;
+                            stroke: #666;
+    
+                            &.svg_animation {
+                                animation: svgshow2 5s ease-out forwards;
+                            }
+                        }
+                    }
+
+                    p {
+                        position: absolute;
+                        top: 21.83%;
+                        left: 52.4%;
+                        text-align: center;
+                        @include font(hind, 10px, 1.25vw, 24px, 400, #000000ED);
+                    }
+
+                    .profile_pic_left1 {
+                        position: absolute;
+                        top: 61.57%;
+                        left: 20.26%;
+                        @include picsize(78px, 12.66vw, 243px);
+                    }
+
+                    .profile_pic_left2 {
+                        position: absolute;
+                        top: 99.17%;
+                        left: 28.85%;
+                        @include picsize(89px, 13.28vw, 255px);
+                    }
+
+                    .profile_pic_left3 {
+                        position: absolute;
+                        top: 120.19%;
+                        left: 19.11%;
+                        @include picsize(81px, 12.66vw, 243px);
+                    }
+
+                    .profile_pic_center {
+                        position: absolute;
+                        top: 57.04%;
+                        left: 35.83%;
+                        @include picsize(160px, 37.19vw, 714px);
+                    }
+
+                    .profile_pic_right {
+                        position: absolute;
+                        top: 50.56%;
+                        left: 59.79%;
+                        @include picsize(81px, 20.26vw, 389px);
+                    }
+                }
+
+            }
+
+            .cooperate {
+                height: 100vh;
+                position: relative;
+
+                h2 {
+                    position: absolute;
+                    top: 83.98%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    @include font(didot, 28px, 2.708vw, 52px, 400, #898989)
+                }
+
+                p {
+                    position: absolute;
+                    top: 91.09%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    @include font(hint, 12px, 1.25vw, 24px, 400, #898989);
+                }
+
+                .logos1 {
+                    position: absolute;
+                    top: 99.07%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    display: flex;
+
+                    img {
+                        margin: 0.5vw;
+                        @include picsize(30px, 6.25vw, 120px);
+                    }
+                }
+            }
+
+            .contact {
+                height: 100vh;
+                position: relative;
+
+                .logos2 {
+                    position: absolute;
+                    top: 16.85%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+
+                    img {
+                        @include picsize(70px, 13.54vw, 260px);
+                        margin: 0.5vw;
+
+                        &:nth-child(2) {
+                            @include picsize(55px, 10.94vw, 210px);
+                        }
+                    }
+                }
+
+                h2 {
+                    position: absolute;
+                    top: 47.87%;
+                    left: 33.59%;
+                    @include font(diot, 28px, 2.708vw, 52px, 400, #898989);
+
+                    &::before {
+                        content: '_____';
+                    }
+
+                    &::after {
+                        content: '_____';
+                    }
+                }
+
+                .address {
+                    position: absolute;
+                    top: 66.94%;
+                    left: 9.27%;
+                    @include font(hind, 14px, 1.417vw, 20px, 400, #000000)
+                }
+
+                .greeting {
+                    position: absolute;
+                    top: 70%;
+                    left: 9.27%;
+                    @include font(hind, 12px, 0.9375vw, 18px, 400, #00000080)
+                }
+
+                ul {
+                    position: absolute;
+                    top: 73.89%;
+                    left: 9.27%;
+                    @include font(hind, 12px, 1.417vw, 20px, 400, #00000066)
+                }
+
+                .QRcode_line {
+                    position: absolute;
+                    top: 91.39%;
+                    left: 9.69%;
+                    @include picsize(116px, 7.4vw, 142px)
+                }
+
+                .QRcode_IG {
+                    position: absolute;
+                    top: 91.39%;
+                    left: 21.56%;
+                    @include picsize(116px, 7.4vw, 142px)
+                }
+
+                label {
+                    border: 3px solid grey;
+                    width: 38.23vw;
+                    height: 4.06vw;
+                    margin-bottom: 20px;
+                    @include font(playfair, 12px, 1.417vw, 20px, 600, #898989);
+
+                    &:nth-of-type(1) {
+                        position: absolute;
+                        top: 66.76%;
+                        left: 52.5%;
+                    }
+
+                    &:nth-of-type(2) {
+                        position: absolute;
+                        top: 75.83%;
+                        left: 52.5%;
+                    }
+
+                    &:nth-of-type(3) {
+                        position: absolute;
+                        top: 84.91%;
+                        left: 52.5%;
+                    }
+
+                    &:nth-of-type(4) {
+                        position: absolute;
+                        top: 93.98%;
+                        left: 52.5%;
+                    }
+                }
+
+                input {
+                    height: 95%;
+                    border: none;
+                    @include font(playfair, 12px, 1.417vw, 20px, 600, #898989);
+                }
+
+                .message {
+                    height: 200px;
+
+                    textarea {
+                        @include font(playfair, 12px, 1.417vw, 20px, 600, #898989);
+                    }
+                }
+            }
+        }
+
+        footer {
+            height: 100vh;
+            position: relative;
+
+            p {
+                position: absolute;
+                top: 22.78%;
+                left: 52.77%;
+                @include font(hind, 12px, 1.417vw, 20px, 400, #0000004D);
+            }
+
+            button {
+                position: absolute;
+                top: 28.07%;
+                left: 67.03%;
+                width: clamp(160px, 10.42vw, 200px);
+                height: clamp(40px, 2.6vw, 50px);
+                @include font(playfair, 18px, 1.25vw, 24px, 700, #898989);
+                border: none;
+            }
+
+            hr {
+                position: absolute;
+                top: 53.89%;
+                left: 50%;
+                height: clamp(135px, 17.4vw, 334px);
+                width: 1px;
+                border-width: 0;
+                background-color: #D9D9D9;
+            }
+
+            small {
+                position: absolute;
+                top: 96.85%;
+                left: 34.32%;
+                @include font(playfair, 10px, 1.25vw, 24px, 700, #898989)
+            }
+        }
+    }
+}
