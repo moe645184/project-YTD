@@ -62,3 +62,21 @@ imgs.forEach(img => {
     })
 
 });
+//light_Box
+const lightBox = document.querySelector('.light_box')
+const BtnClose = document.querySelector('.light_box_closeBtn')
+function closeLightBox(){
+    lightBox.style.display = 'none'
+}
+
+BtnClose.addEventListener('click',closeLightBox)
+
+imgs.forEach(img => {
+    img.addEventListener('click',function() {
+        console.log(lightBox.querySelector('.light_box_card >img').src);
+        console.log(this.src);
+        lightBox.style.display ='block'
+        lightBox.querySelectorAll('.light_box_card >img')[0].src = this.src
+        lightBox.querySelectorAll('.light_box_card >img')[1].src = this.src
+    })
+});

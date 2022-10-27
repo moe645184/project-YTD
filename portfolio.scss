@@ -34,21 +34,21 @@
 
                 svg {
                     position: absolute;
-                    top: 7.41vh;
+                    top: 50vh;
                     left: 4.8%;
                 }
 
                 .burger_btn_open {
                     cursor: pointer;
                     position: absolute;
-                    top: 7.41vh;
+                    top: 50vh;
                     right: 4.53%;
                     @include font('', 16px, 2.803vw, 40px, 500, #89898966)
                 }
 
                 nav {
-                    height: 0vh;
-                    width: 100%;
+                    height: 100vh;
+                    width: 0%;
                     position: absolute;
                     top: 0;
                     background-color: #000;
@@ -57,7 +57,7 @@
                     z-index: 2;
 
                     &.open {
-                        height: 100vh;
+                        width: 100%;
                     }
 
                     p {
@@ -116,6 +116,7 @@
                     opacity: 1;
                 }
             }
+
             .portfolio_banner {
                 height: 100vh;
                 position: relative;
@@ -142,7 +143,8 @@
                 li {
                     @include font(playfair, 28px, 2.60vw, 50px, 600, #898989);
                     margin-bottom: 2.19%;
-                    a{
+
+                    a {
                         text-decoration: none;
                         color: #898989;
                     }
@@ -151,6 +153,49 @@
         }
 
         main {
+            .light_box {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #fff;
+                margin: auto;
+                display: none;
+                z-index: 10;
+
+                .light_box_card {
+                    text-align: center;
+                    .light_box_closeBtn{
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        cursor: pointer;
+                    }
+                    img {
+                        width: 50%;
+                        &.light_box_show {
+                            object-fit: contain;
+                            position:absolute;
+                            z-index: 2;
+                            right: 0;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+
+                        &.light_box_shadow {
+                            position: absolute;
+                            top: 10%;
+                            left: 30%;
+                            object-fit: contain;
+                            z-index: 1;
+                            filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+                        }
+                    }
+                }
+            }
+
             .commercial {
                 .commercial_banner {
                     height: 100vh;
@@ -161,7 +206,7 @@
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%,-50%);
+                        transform: translate(-50%, -50%);
                         @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
                         font-style: italic;
                     }
@@ -215,7 +260,7 @@
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%,-50%);
+                        transform: translate(-50%, -50%);
                         @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
                         font-style: italic;
                     }
@@ -269,7 +314,7 @@
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%,-50%);
+                        transform: translate(-50%, -50%);
                         @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
                         font-style: italic;
                     }
@@ -323,7 +368,7 @@
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%,-50%);
+                        transform: translate(-50%, -50%);
                         @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
                         font-style: italic;
                     }
@@ -377,7 +422,7 @@
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%,-50%);
+                        transform: translate(-50%, -50%);
                         @include font(playfair, 50px, 7.81vw, 150px, 400, #000000);
                         font-style: italic;
                     }
@@ -397,12 +442,14 @@
 
                         .item {
                             position: relative;
+
                             video {
                                 width: 70%;
                                 height: 100%;
                                 position: relative;
                                 z-index: 2;
                             }
+
                             .shadow {
                                 position: absolute;
                                 top: -10%;
@@ -418,16 +465,17 @@
                 }
             }
         }
-        
-        footer{
+
+        footer {
             height: 100vh;
-                p{
-                    line-height: 100vh;
-                    text-align: center;
-                    @include font(didot,20px ,5vw ,96px ,700 ,#0000004D );
-                    font-style: italic;
-                    
-                }
+
+            p {
+                line-height: 100vh;
+                text-align: center;
+                @include font(didot, 20px, 5vw, 96px, 700, #0000004D);
+                font-style: italic;
+
+            }
         }
     }
 }
