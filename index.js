@@ -31,6 +31,7 @@ const serviceContent = document.querySelector('.service>p')
 const goalContent = document.querySelector('.goal>p')
 
 serviceContent.addEventListener('mouseenter', () => {
+    serviceContent.classList.toggle('font')
     serviceContent.innerHTML = `
     獨特的價值，選對了光更能展露專屬的鋒芒。</br>
     我們承載著各路人的期盼，提供上山下海的各式攝影服務。並為客戶客製化報價，以達到雙贏的最大效益。</br>
@@ -40,6 +41,7 @@ serviceContent.addEventListener('mouseenter', () => {
 })
 
 serviceContent.addEventListener('mouseout', () => {
+    serviceContent.classList.toggle('font')
     serviceContent.innerHTML = `
     Unique value, choose the right light to reveal the exclusive sharpness.</br>
                 We provide all kinds of photography services with the expectation of all people.</br>
@@ -49,6 +51,7 @@ serviceContent.addEventListener('mouseout', () => {
 })
 
 goalContent.addEventListener('mouseover', () => {
+    goalContent.classList.toggle('font')
     goalContent.innerHTML = `
     以客戶品牌內涵為要點，</br>
     專注於建構專業形象涵蓋不同領域與產業，</br>
@@ -57,6 +60,7 @@ goalContent.addEventListener('mouseover', () => {
 })
 
 goalContent.addEventListener('mouseout', () => {
+    goalContent.classList.toggle('font')
     goalContent.innerHTML = `
     Focusing on customer brand connotation,</br>
     Focus on building a professional image covering different fields and industries,</br>
@@ -90,13 +94,13 @@ const profilePicRight = document.querySelector('.profile_pic_right')
 const profilePicCenter = document.querySelector('.profile_pic_center')
 
 function profileMove(){
-    if(window.scrollY > intro.offsetTop +intro.clientHeight/2 && window.scrollY < intro.offsetTop +intro.clientHeight*2){
+    if(screen.width > 1099 &&window.scrollY > intro.offsetTop +intro.clientHeight/2 && window.scrollY < intro.offsetTop +intro.clientHeight*2){
     var moveStart = window.scrollY - intro.offsetTop - intro.clientHeight/2
     profilePicLeft1.style.left =  `${20.26-18*moveStart/intro.clientHeight/1.5}%`
-    profilePicLeft2.style.top = `${99.17-18.24*moveStart/intro.clientHeight/1.5}%`
+    profilePicLeft2.style.top = `${49.58-9.12*moveStart/intro.clientHeight/1.5}%`
     profilePicLeft2.style.left  = `${28.85-11.57*moveStart/intro.clientHeight/1.5}%`
     profilePicLeft3.style.left = `${19.11-12.03*moveStart/intro.clientHeight/1.5}%`
-    profilePicRight.style.top = `${50.56+32.87*moveStart/intro.clientHeight/1.5}%`
+    profilePicRight.style.top = `${25.28+16.43*moveStart/intro.clientHeight/1.5}%`
     profilePicRight.style.left = `${59.79+15.42*moveStart/intro.clientHeight/1.5}%`
     }
 }
@@ -108,7 +112,6 @@ const service = document.querySelector('.service')
 const goal = document.querySelector('.goal')
 const servicePath = document.querySelector('.service >svg>path')
 const goalPath = document.querySelector('.goal >svg>path')
-// const intro = document.querySelector('.intro')
 const photoPath = document.querySelector('.svg_photo>path')
 const graphyPath = document.querySelector('.svg_graphy>path')
 const studioPath = document.querySelector('.svg_studio>path')
@@ -124,7 +127,7 @@ window.addEventListener('scroll',()=>{
         goalPath.classList.add('svg_animation')
     }
 
-    if(scrollY>intro.offsetTop){
+    if(scrollY>goal.offsetTop){
         photoPath.classList.add('svg_animation')
         graphyPath.classList.add('svg_animation')
         studioPath.classList.add('svg_animation')
