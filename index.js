@@ -1,6 +1,27 @@
+//loading page
+const loadingPage = document.querySelector('.loading_page')
+const span = document.querySelector('span')
+const body = document.querySelector('body')
+for (let i = 0; i < 101; i++) {
+    setTimeout(function loading() {
+        span.innerHTML = `${i}`
+        },i*i/1.7)
+        body.style.overflow = 'hidden'
+}
+setTimeout(function loadingFin() {
+    body.style.overflow = 'auto'
+    loadingPage.style.display = 'none'
+},6500)
+
+//banner video
+const bannerVideo = document.querySelector('header > video')
+setTimeout(function() {
+    bannerVideo.play()
+},6600)
+
+
 //burger show & hidden
 
-const body = document.querySelector('body')
 const header = document.querySelector('header')
 const nav = document.querySelector('nav')
 const burger = document.querySelector('.burger')
@@ -127,7 +148,7 @@ window.addEventListener('scroll',()=>{
         goalPath.classList.add('svg_animation')
     }
 
-    if(scrollY>goal.offsetTop){
+    if(scrollY>intro.offsetTop){
         photoPath.classList.add('svg_animation')
         graphyPath.classList.add('svg_animation')
         studioPath.classList.add('svg_animation')
