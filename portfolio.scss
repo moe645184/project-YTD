@@ -165,17 +165,20 @@
 
                 .light_box_card {
                     text-align: center;
-                    .light_box_closeBtn{
+
+                    .light_box_closeBtn {
                         position: absolute;
                         top: 5%;
                         right: 5%;
                         cursor: pointer;
                     }
+
                     img {
                         width: 50%;
+
                         &.light_box_show {
                             object-fit: contain;
-                            position:absolute;
+                            position: absolute;
                             z-index: 2;
                             right: 0;
                             left: 0;
@@ -218,11 +221,19 @@
                     display: flex;
                     justify-content: space-evenly;
 
+                    @media (max-width:1100px) {
+                        flex-wrap: wrap;
+                        height: 1300vh;
+                    }
+
                     .portfolio_commercial_column {
                         width: 30%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
+                        @media (max-width:1100px) {
+                            width: 45%;
+                        }
 
                         .item {
                             position: relative;
@@ -271,12 +282,19 @@
                     height: 1400vh;
                     display: flex;
                     justify-content: space-evenly;
+                    @media (max-width:1100px) {
+                        flex-wrap: wrap;
+                        height: 2500vh;
+                    }
 
                     .portfolio_portrait_column {
                         width: 30%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
+                        @media (max-width:1100px) {
+                            width: 45%;
+                        }
 
                         .item {
                             position: relative;
@@ -325,12 +343,19 @@
                     height: 700vh;
                     display: flex;
                     justify-content: space-evenly;
+                    @media (max-width:1100px) {
+                        flex-wrap: wrap;
+                        height: 1100vh;
+                    }
 
                     .portfolio_selection_column {
                         width: 30%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
+                        @media (max-width:1100px) {
+                            width: 45%;
+                        }
 
                         .item {
                             position: relative;
@@ -379,12 +404,19 @@
                     height: 200vh;
                     display: flex;
                     justify-content: space-evenly;
+                    @media (max-width:1100px) {
+                        flex-wrap: wrap;
+                        height: 400vh;
+                    }
 
                     .portfolio_record_column {
                         width: 30%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
+                        @media (max-width:1100px) {
+                            width: 45%;
+                        }
 
                         .item {
                             position: relative;

@@ -210,11 +210,22 @@
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 1100px) {
+  * body main .commercial .commercial_portfolio {
+    flex-wrap: wrap;
+    height: 1300vh;
+  }
+}
 * body main .commercial .commercial_portfolio .portfolio_commercial_column {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media (max-width: 1100px) {
+  * body main .commercial .commercial_portfolio .portfolio_commercial_column {
+    width: 45%;
+  }
 }
 * body main .commercial .commercial_portfolio .portfolio_commercial_column .item {
   position: relative;
@@ -258,11 +269,22 @@
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 1100px) {
+  * body main .portrait .portrait_portfolio {
+    flex-wrap: wrap;
+    height: 2500vh;
+  }
+}
 * body main .portrait .portrait_portfolio .portfolio_portrait_column {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media (max-width: 1100px) {
+  * body main .portrait .portrait_portfolio .portfolio_portrait_column {
+    width: 45%;
+  }
 }
 * body main .portrait .portrait_portfolio .portfolio_portrait_column .item {
   position: relative;
@@ -306,11 +328,22 @@
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 1100px) {
+  * body main .selection .selection_portfolio {
+    flex-wrap: wrap;
+    height: 1100vh;
+  }
+}
 * body main .selection .selection_portfolio .portfolio_selection_column {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media (max-width: 1100px) {
+  * body main .selection .selection_portfolio .portfolio_selection_column {
+    width: 45%;
+  }
 }
 * body main .selection .selection_portfolio .portfolio_selection_column .item {
   position: relative;
@@ -354,11 +387,22 @@
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 1100px) {
+  * body main .record .record_portfolio {
+    flex-wrap: wrap;
+    height: 400vh;
+  }
+}
 * body main .record .record_portfolio .portfolio_record_column {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media (max-width: 1100px) {
+  * body main .record .record_portfolio .portfolio_record_column {
+    width: 45%;
+  }
 }
 * body main .record .record_portfolio .portfolio_record_column .item {
   position: relative;

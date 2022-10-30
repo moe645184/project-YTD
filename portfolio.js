@@ -18,6 +18,7 @@ window.addEventListener('scroll', navshow)
 //backgroundtext follow with scrollY
 const backgroundText = document.querySelectorAll('h2')
 window.addEventListener('scroll', function () {
+    if(screen.width >1100){
     if (window.scrollY > backgroundText[0].offsetTop * 4 && window.scrollY < backgroundText[0].offsetTop * 23) {
         backgroundText[0].style.position = 'fixed'
     } else { backgroundText[0].style.position = 'absolute' }
@@ -37,7 +38,28 @@ window.addEventListener('scroll', function () {
     if (window.scrollY > backgroundText[0].offsetTop * 76 && window.scrollY < backgroundText[0].offsetTop * 81) {
         backgroundText[4].style.position = 'fixed'
     } else { backgroundText[4].style.position = 'absolute' }
-})
+}else{
+    if (window.scrollY > backgroundText[0].offsetTop * 4 && window.scrollY < backgroundText[0].offsetTop * 31) {
+        backgroundText[0].style.position = 'fixed'
+    } else { backgroundText[0].style.position = 'absolute' }
+
+    if (window.scrollY > backgroundText[0].offsetTop * 32 && window.scrollY < backgroundText[0].offsetTop * 83) {
+        backgroundText[1].style.position = 'fixed'
+    } else { backgroundText[1].style.position = 'absolute' }
+
+    if (window.scrollY > backgroundText[0].offsetTop * 84 && window.scrollY < backgroundText[0].offsetTop * 107) {
+        backgroundText[2].style.position = 'fixed'
+    } else { backgroundText[2].style.position = 'absolute' }
+
+    if (window.scrollY > backgroundText[0].offsetTop * 108 && window.scrollY < backgroundText[0].offsetTop * 117) {
+        backgroundText[3].style.position = 'fixed'
+    } else { backgroundText[3].style.position = 'absolute' }
+
+    if (window.scrollY > backgroundText[0].offsetTop * 118 && window.scrollY < backgroundText[0].offsetTop * 123) {
+        backgroundText[4].style.position = 'fixed'
+    } else { backgroundText[4].style.position = 'absolute' }
+}}
+)
 
 //hover video and play
 const videos = document.querySelectorAll('video')
