@@ -32,7 +32,7 @@ window.addEventListener('scroll', navshow)
 //backgroundtext follow with scrollY
 const backgroundText = document.querySelectorAll('h2')
 window.addEventListener('scroll', function () {
-    if(screen.width >1100){
+    if(this.window.innerWidth >1100){
     if (window.scrollY > backgroundText[0].offsetTop * 4 && window.scrollY < backgroundText[0].offsetTop * 23) {
         backgroundText[0].style.position = 'fixed'
     } else { backgroundText[0].style.position = 'absolute' }
@@ -86,10 +86,9 @@ videos.forEach(video => {
 //picture effect
 const imgs = document.querySelectorAll('.show')
 function move(e) {
-    rotateX = 20 * (e.layerX / this.width)
-    rotateY = 20 * (e.layerY / this.height)
-    this.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg`
-    // console.log(img.style.transform)
+    let moveX = e.layerX - this.width/2
+    let moveY = e.layerY - this.height/2
+    this.style.transform = `scale(1.2,1.2) translate(${moveX/5}px,${moveY/5}px) rotateX(${moveX/10}deg) rotateY(${moveY/10}deg)`
 }
 imgs.forEach(img => {
     img.addEventListener('mousemove', move)
@@ -107,12 +106,50 @@ function closeLightBox(){
 
 BtnClose.addEventListener('click',closeLightBox)
 
-imgs.forEach(img => {
+const commercialImg = document.querySelectorAll('.commercial .show')
+
+commercialImg.forEach(img => {
     img.addEventListener('click',function() {
         console.log(lightBox.querySelector('.light_box_card >img').src);
         console.log(this.src);
         lightBox.style.display ='block'
-        lightBox.querySelectorAll('.light_box_card >img')[0].src = this.src
+        lightBox.querySelectorAll('.light_box_card >img')[0].src = `./portfolio_commercial/HQ_commercial/commercial${this.dataset.num}.jpg`
+        lightBox.querySelectorAll('.light_box_card >img')[1].src = this.src
+    })
+});
+
+const portraitImg = document.querySelectorAll('.portrait .show')
+
+portraitImg.forEach(img => {
+    img.addEventListener('click',function() {
+        console.log(lightBox.querySelector('.light_box_card >img').src);
+        console.log(this.src);
+        lightBox.style.display ='block'
+        lightBox.querySelectorAll('.light_box_card >img')[0].src = `./portfolio_portrait/HQ_portrait/portrait${this.dataset.num}.jpg`
+        lightBox.querySelectorAll('.light_box_card >img')[1].src = this.src
+    })
+});
+
+const selectionImg = document.querySelectorAll('.selection .show')
+
+selectionImg.forEach(img => {
+    img.addEventListener('click',function() {
+        console.log(lightBox.querySelector('.light_box_card >img').src);
+        console.log(this.src);
+        lightBox.style.display ='block'
+        lightBox.querySelectorAll('.light_box_card >img')[0].src = `./portfolio_selection/HQ_selection/selection${this.dataset.num}.jpg`
+        lightBox.querySelectorAll('.light_box_card >img')[1].src = this.src
+    })
+});
+
+const recordImg = document.querySelectorAll('.record .show')
+
+recordImg.forEach(img => {
+    img.addEventListener('click',function() {
+        console.log(lightBox.querySelector('.light_box_card >img').src);
+        console.log(this.src);
+        lightBox.style.display ='block'
+        lightBox.querySelectorAll('.light_box_card >img')[0].src = `./portfolio_record/HQ_record/record${this.dataset.num}.jpg`
         lightBox.querySelectorAll('.light_box_card >img')[1].src = this.src
     })
 });
