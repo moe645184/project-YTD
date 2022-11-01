@@ -257,6 +257,11 @@
   z-index: 1;
   filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
 }
+@media (max-width: 1100px) {
+  * body main .light_box .light_box_card img.light_box_shadow {
+    display: none;
+  }
+}
 * body main .commercial .commercial_banner {
   height: 100vh;
   background-color: rgba(72, 75, 87, 0.3019607843);
@@ -315,6 +320,11 @@
   height: 100%;
   z-index: 1;
   filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+}
+@media (max-width: 1100px) {
+  * body main .commercial .commercial_portfolio .portfolio_commercial_column .item .shadow {
+    display: none;
+  }
 }
 * body main .portrait .portrait_banner {
   height: 100vh;
@@ -375,6 +385,11 @@
   z-index: 1;
   filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
 }
+@media (max-width: 1100px) {
+  * body main .portrait .portrait_portfolio .portfolio_portrait_column .item .shadow {
+    display: none;
+  }
+}
 * body main .selection .selection_banner {
   height: 100vh;
   background-color: rgba(72, 75, 87, 0.3019607843);
@@ -433,6 +448,11 @@
   height: 100%;
   z-index: 1;
   filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+}
+@media (max-width: 1100px) {
+  * body main .selection .selection_portfolio .portfolio_selection_column .item .shadow {
+    display: none;
+  }
 }
 * body main .record .record_banner {
   height: 100vh;
@@ -493,6 +513,11 @@
   z-index: 1;
   filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
 }
+@media (max-width: 1100px) {
+  * body main .record .record_portfolio .portfolio_record_column .item .shadow {
+    display: none;
+  }
+}
 * body main .film .film_banner {
   height: 100vh;
   background-color: rgba(72, 75, 87, 0.3019607843);
@@ -539,6 +564,11 @@
   height: 100%;
   z-index: 1;
   filter: brightness(130%) saturate(200%) blur(30px) opacity(30%);
+}
+@media (max-width: 1100px) {
+  * body main .film .film_portfolio .portfolio_film_column .item .shadow {
+    display: none;
+  }
 }
 * body footer {
   height: 100vh;

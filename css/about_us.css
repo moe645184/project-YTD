@@ -20,10 +20,13 @@
   box-sizing: border-box;
 }
 
-header {
+body::-webkit-scrollbar {
+  display: none;
+}
+body header {
   width: 100%;
 }
-header .burger {
+body header .burger {
   position: fixed;
   width: 100%;
   justify-content: space-between;
@@ -31,12 +34,12 @@ header .burger {
   opacity: 0;
   z-index: 2;
 }
-header .burger svg {
+body header .burger svg {
   position: absolute;
   top: 7.41vh;
   left: 4.8%;
 }
-header .burger .burger_btn_open {
+body header .burger .burger_btn_open {
   cursor: pointer;
   position: absolute;
   top: 7.41vh;
@@ -46,7 +49,7 @@ header .burger .burger_btn_open {
   font-weight: 500;
   color: rgba(137, 137, 137, 0.4);
 }
-header .burger nav {
+body header .burger nav {
   height: 0vh;
   width: 100%;
   position: absolute;
@@ -56,10 +59,10 @@ header .burger nav {
   transition: all 1s;
   z-index: 2;
 }
-header .burger nav.open {
+body header .burger nav.open {
   height: 100vh;
 }
-header .burger nav p {
+body header .burger nav p {
   font-family: didot;
   font-size: clamp(11px, 1.25vw, 24px);
   font-weight: 700;
@@ -69,39 +72,39 @@ header .burger nav p {
   left: 7.86%;
   font-style: italic;
 }
-header .burger nav .nav_content {
+body header .burger nav .nav_content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-header .burger nav .nav_content img {
+body header .burger nav .nav_content img {
   width: clamp(196.65px, 19.53vw, 375px);
   margin-right: 4.32%;
 }
-header .burger nav .nav_content ul {
+body header .burger nav .nav_content ul {
   list-style: none;
   font-style: italic;
   margin-left: 4.32%;
 }
-header .burger nav .nav_content ul li {
+body header .burger nav .nav_content ul li {
   margin: 1% 0;
 }
-header .burger nav .nav_content ul li a {
+body header .burger nav .nav_content ul li a {
   text-decoration: none;
   font-family: didot;
   font-size: clamp(26px, 3.54vw, 68px);
   font-weight: 400;
   color: white;
 }
-header .burger nav .nav_btn_close {
+body header .burger nav .nav_btn_close {
   color: white;
   position: absolute;
   cursor: pointer;
   top: 83.4%;
   left: 89.58vw;
 }
-header .burger .totop {
+body header .burger .totop {
   position: fixed;
   right: 5%;
   bottom: 5%;
@@ -111,47 +114,46 @@ header .burger .totop {
   font-weight: 600;
   color: #C6C4C4;
 }
-header .burger.active {
+body header .burger.active {
   opacity: 1;
 }
-
-main {
+body main {
   overflow: hidden;
 }
-main svg {
+body main svg {
   width: clamp(337px, 86.46vw, 1660px);
   position: absolute;
   top: 0;
   left: 0;
 }
 @media (max-width: 992px) {
-  main svg {
+  body main svg {
     height: 250px;
   }
 }
 @media (max-width: 525px) {
-  main svg {
+  body main svg {
     height: 120px;
   }
 }
-main .photographer_picture {
+body main .photographer_picture {
   width: clamp(157.08px, 24.11vw, 463px);
   position: absolute;
   top: 413px;
   left: 13.5%;
 }
 @media (max-width: 992px) {
-  main .photographer_picture {
+  body main .photographer_picture {
     top: 280px;
   }
 }
 @media (max-width: 525px) {
-  main .photographer_picture {
+  body main .photographer_picture {
     top: 125px;
     left: 45px;
   }
 }
-main .about_photographer h2 {
+body main .about_photographer h2 {
   font-family: playfair;
   font-size: clamp(20px, 1.875vw, 36px);
   font-weight: 600;
@@ -161,24 +163,24 @@ main .about_photographer h2 {
   left: 44.06%;
 }
 @media (max-width: 1085px) {
-  main .about_photographer h2 {
+  body main .about_photographer h2 {
     top: 420px;
   }
 }
 @media (max-width: 992px) {
-  main .about_photographer h2 {
+  body main .about_photographer h2 {
     top: 290px;
   }
 }
 @media (max-width: 525px) {
-  main .about_photographer h2 {
+  body main .about_photographer h2 {
     top: 353px;
     left: 45px;
     line-height: 28px;
     letter-spacing: 0.057em;
   }
 }
-main .about_photographer h3 {
+body main .about_photographer h3 {
   font-family: hind;
   font-size: clamp(12px, 1.25vw, 24px);
   font-weight: 400;
@@ -189,41 +191,41 @@ main .about_photographer h3 {
   left: 44.06%;
 }
 @media (max-width: 1333px) {
-  main .about_photographer h3 {
+  body main .about_photographer h3 {
     top: 495px;
   }
 }
 @media (max-width: 1223px) {
-  main .about_photographer h3 {
+  body main .about_photographer h3 {
     top: 480px;
   }
 }
 @media (max-width: 1085px) {
-  main .about_photographer h3 {
+  body main .about_photographer h3 {
     top: 470px;
   }
 }
 @media (max-width: 992px) {
-  main .about_photographer h3 {
+  body main .about_photographer h3 {
     top: 350px;
   }
 }
 @media (max-width: 768px) {
-  main .about_photographer h3 {
+  body main .about_photographer h3 {
     top: 330px;
   }
 }
 @media (max-width: 525px) {
-  main .about_photographer h3 {
+  body main .about_photographer h3 {
     top: 379px;
     left: 45px;
     line-height: 20px;
   }
 }
-main .about_photographer span::before {
+body main .about_photographer span::before {
   content: "|";
 }
-main .about_photographer p {
+body main .about_photographer p {
   font-family: hind;
   font-size: clamp(12px, 1.25vw, 24px);
   font-weight: 400;
@@ -235,60 +237,60 @@ main .about_photographer p {
   line-height: 40px;
 }
 @media (max-width: 1463px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     top: 570px;
   }
 }
 @media (max-width: 1333px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     top: 560px;
   }
 }
 @media (max-width: 1223px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     top: 520px;
     line-height: 38px;
   }
 }
 @media (max-width: 1085px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     line-height: 34px;
   }
 }
 @media (max-width: 1021px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     line-height: 31px;
   }
 }
 @media (max-width: 958px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     line-height: 28px;
   }
 }
 @media (max-width: 992px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     top: 400px;
     line-height: 25px;
   }
 }
 @media (max-width: 875px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     line-height: 23px;
   }
 }
 @media (max-width: 768px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     top: 360px;
   }
 }
 @media (max-width: 525px) {
-  main .about_photographer p {
+  body main .about_photographer p {
     top: 408px;
     left: 45px;
     line-height: 15px;
   }
 }
-main .about_photographer a {
+body main .about_photographer a {
   font-family: playfair;
   font-size: clamp(12px, 1.25vw, 20px);
   font-weight: 600;
@@ -303,24 +305,24 @@ main .about_photographer a {
   text-transform: uppercase;
 }
 @media (max-width: 992px) {
-  main .about_photographer a {
+  body main .about_photographer a {
     top: 650px;
   }
 }
 @media (max-width: 768px) {
-  main .about_photographer a {
+  body main .about_photographer a {
     top: 580px;
     left: 80%;
   }
 }
 @media (max-width: 525px) {
-  main .about_photographer a {
+  body main .about_photographer a {
     top: 563px;
     left: 309px;
     letter-spacing: 0.015em;
   }
 }
-main .sub-content .bgc-black-box {
+body main .sub-content .bgc-black-box {
   width: clamp(205px, 32.76vw, 629px);
   height: 165px;
   background-color: #000;
@@ -330,24 +332,24 @@ main .sub-content .bgc-black-box {
   text-align: center;
 }
 @media (max-width: 992px) {
-  main .sub-content .bgc-black-box {
+  body main .sub-content .bgc-black-box {
     top: 800px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .bgc-black-box {
+  body main .sub-content .bgc-black-box {
     height: 100px;
     top: 700px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .bgc-black-box {
+  body main .sub-content .bgc-black-box {
     height: 64px;
     top: 612px;
     left: -1px;
   }
 }
-main .sub-content .bgc-black-box .sub-content-h2 {
+body main .sub-content .bgc-black-box .sub-content-h2 {
   font-family: didot;
   font-size: clamp(40px, 6.25vw, 120px);
   font-weight: 400;
@@ -357,16 +359,16 @@ main .sub-content .bgc-black-box .sub-content-h2 {
   line-height: 150px;
 }
 @media (max-width: 768px) {
-  main .sub-content .bgc-black-box .sub-content-h2 {
+  body main .sub-content .bgc-black-box .sub-content-h2 {
     line-height: 100px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .bgc-black-box .sub-content-h2 {
+  body main .sub-content .bgc-black-box .sub-content-h2 {
     line-height: 64px;
   }
 }
-main .sub-content .bgc-black-box .sub-content-h2-1 {
+body main .sub-content .bgc-black-box .sub-content-h2-1 {
   font-family: ryumin;
   font-size: clamp(0px, 6.5vw, 125px);
   font-weight: 400;
@@ -375,7 +377,7 @@ main .sub-content .bgc-black-box .sub-content-h2-1 {
   text-align: center;
   font-style: normal;
 }
-main .sub-content .sub-content-p {
+body main .sub-content .sub-content-p {
   font-family: didot;
   font-size: clamp(30px, 5.2vw, 100px);
   font-weight: 700;
@@ -387,25 +389,25 @@ main .sub-content .sub-content-p {
   left: 10.21%;
 }
 @media (max-width: 992px) {
-  main .sub-content .sub-content-p {
+  body main .sub-content .sub-content-p {
     top: 1000px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .sub-content-p {
+  body main .sub-content .sub-content-p {
     height: 100px;
     top: 800px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .sub-content-p {
+  body main .sub-content .sub-content-p {
     width: 252px;
     top: 688px;
     left: 23px;
     line-height: 30px;
   }
 }
-main .sub-content .sub-content-p-1 {
+body main .sub-content .sub-content-p-1 {
   font-family: hind;
   font-size: clamp(20px, 2.08vw, 40px);
   font-weight: 400;
@@ -419,161 +421,160 @@ main .sub-content .sub-content-p-1 {
   width: 42%;
 }
 @media (max-width: 992px) {
-  main .sub-content .sub-content-p-1 {
+  body main .sub-content .sub-content-p-1 {
     top: 1000px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .sub-content-p-1 {
+  body main .sub-content .sub-content-p-1 {
     height: 100px;
     top: 820px;
     line-height: 40px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .sub-content-p-1 {
+  body main .sub-content .sub-content-p-1 {
     top: 688px;
     left: 23px;
     font-size: 15px;
     line-height: 20px;
   }
 }
-main .sub-content .upper-right-portrait {
+body main .sub-content .upper-right-portrait {
   width: clamp(172px, 22.4vw, 430px);
   position: absolute;
   top: 1227px;
   left: 73.02%;
 }
 @media (max-width: 992px) {
-  main .sub-content .upper-right-portrait {
+  body main .sub-content .upper-right-portrait {
     top: 1027px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .upper-right-portrait {
+  body main .sub-content .upper-right-portrait {
     top: 820px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .upper-right-portrait {
+  body main .sub-content .upper-right-portrait {
     top: 768px;
     left: 203px;
   }
 }
-main .sub-content .upper-left-portrait {
+body main .sub-content .upper-left-portrait {
   width: clamp(139px, 15.1vw, 290px);
   position: absolute;
   top: 1310px;
   left: 54.8%;
 }
 @media (max-width: 992px) {
-  main .sub-content .upper-left-portrait {
+  body main .sub-content .upper-left-portrait {
     top: 1050px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .upper-left-portrait {
+  body main .sub-content .upper-left-portrait {
     top: 840px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .upper-left-portrait {
+  body main .sub-content .upper-left-portrait {
     top: 811px;
     left: 45px;
   }
 }
-main .sub-content .lower-middle-portrait {
+body main .sub-content .lower-middle-portrait {
   width: clamp(135px, 15.05vw, 289px);
   position: absolute;
   top: 1740px;
   left: 50.93%;
 }
 @media (max-width: 992px) {
-  main .sub-content .lower-middle-portrait {
+  body main .sub-content .lower-middle-portrait {
     top: 1300px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .lower-middle-portrait {
+  body main .sub-content .lower-middle-portrait {
     top: 1000px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .lower-middle-portrait {
+  body main .sub-content .lower-middle-portrait {
     top: 938px;
     left: 131px;
   }
 }
-main .sub-content .lower-right-portrait {
+body main .sub-content .lower-right-portrait {
   width: clamp(115px, 15.1vw, 304px);
   position: absolute;
   top: 1658px;
   left: 65.67%;
 }
 @media (max-width: 992px) {
-  main .sub-content .lower-right-portrait {
+  body main .sub-content .lower-right-portrait {
     top: 1258px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .lower-right-portrait {
+  body main .sub-content .lower-right-portrait {
     top: 1020px;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .lower-right-portrait {
+  body main .sub-content .lower-right-portrait {
     top: 1016px;
     left: 239px;
   }
 }
-main .sub-content .lower-left-portrait-1 {
+body main .sub-content .lower-left-portrait-1 {
   width: clamp(116px, 15.05vw, 289px);
   position: absolute;
   top: 1805px;
   left: 21.04%;
 }
 @media (max-width: 992px) {
-  main .sub-content .lower-left-portrait-1 {
+  body main .sub-content .lower-left-portrait-1 {
     top: 1305px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .lower-left-portrait-1 {
+  body main .sub-content .lower-left-portrait-1 {
     top: 1100px;
     left: 40%;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .lower-left-portrait-1 {
+  body main .sub-content .lower-left-portrait-1 {
     top: 1100px;
     left: 87px;
   }
 }
-main .sub-content .lower-left-portrait-2 {
+body main .sub-content .lower-left-portrait-2 {
   width: clamp(116px, 15.05vw, 289px);
   position: absolute;
   top: 1672px;
   left: 34.63%;
 }
 @media (max-width: 992px) {
-  main .sub-content .lower-left-portrait-2 {
+  body main .sub-content .lower-left-portrait-2 {
     top: 1272px;
   }
 }
 @media (max-width: 768px) {
-  main .sub-content .lower-left-portrait-2 {
+  body main .sub-content .lower-left-portrait-2 {
     top: 1000px;
     left: 30%;
   }
 }
 @media (max-width: 525px) {
-  main .sub-content .lower-left-portrait-2 {
+  body main .sub-content .lower-left-portrait-2 {
     top: 981px;
     left: -9px;
   }
 }
-
-footer .vertical-line {
+body footer .vertical-line {
   width: 100%;
   height: 335px;
   background: linear-gradient(#D9D9D9, #D9D9D9) no-repeat center/2px 100%;
@@ -581,21 +582,21 @@ footer .vertical-line {
   top: 2160px;
 }
 @media (max-width: 992px) {
-  footer .vertical-line {
+  body footer .vertical-line {
     top: 1600px;
   }
 }
 @media (max-width: 768px) {
-  footer .vertical-line {
+  body footer .vertical-line {
     top: 1300px;
   }
 }
 @media (max-width: 525px) {
-  footer .vertical-line {
+  body footer .vertical-line {
     display: none;
   }
 }
-footer small {
+body footer small {
   font-family: playfair;
   font-size: clamp(10px, 1.25vw, 24px);
   font-weight: 700;
@@ -607,17 +608,17 @@ footer small {
   left: 35.2%;
 }
 @media (max-width: 992px) {
-  footer small {
+  body footer small {
     top: 2000px;
   }
 }
 @media (max-width: 768px) {
-  footer small {
+  body footer small {
     top: 1700px;
   }
 }
 @media (max-width: 525px) {
-  footer small {
+  body footer small {
     top: 1386px;
     left: 72px;
     line-height: 13px;
