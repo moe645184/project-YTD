@@ -1,3 +1,4 @@
+//loading page
 const loadingPage = document.querySelector('.loading_page')
 const loadingSvg = document.querySelector('.loading_page svg')
 const loadingSpan = document.querySelector('.loading_page span')

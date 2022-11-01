@@ -58,65 +58,49 @@
   display: none;
 }
 * body .loading_page {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
   position: fixed;
   top: 0;
-  background-color: white;
-  z-index: 100;
-}
-* body .loading_page .wrap {
-  display: flex;
   width: 100%;
   height: 100vh;
-  /*   margin-top: 150px; */
-  perspective: 50px;
-  perspective-origin: 50% 50%;
+  z-index: 10;
+  overflow: hidden;
+  background-color: #fff;
 }
-* body .loading_page .wrap .cube {
-  transform-style: preserve-3d;
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  position: relative;
-  animation: loop 6s linear;
-}
-* body .loading_page .wrap .cube svg {
-  width: 200px;
-  height: 200px;
-  background: white;
-  border: 1px solid #aba;
-  border-radius: 3px;
+* body .loading_page svg {
   position: absolute;
-  opacity: 0.9;
+  bottom: 0;
+  width: 66.875vw;
+  transition: 0.5s;
+  transform: translate(-100%, 0);
 }
-* body .loading_page .wrap .cube svg:nth-child(1) {
-  transform: rotateY(0deg) translateZ(100px);
-}
-* body .loading_page .wrap .cube svg:nth-child(2) {
-  transform: rotateY(90deg) translateZ(100px);
-}
-* body .loading_page .wrap .cube svg:nth-child(3) {
-  transform: rotateY(180deg) translateZ(100px);
-}
-* body .loading_page .wrap .cube svg:nth-child(4) {
-  transform: rotateY(-90deg) translateZ(100px);
-}
-* body .loading_page .wrap .cube svg:nth-child(5) {
-  transform: rotateX(270deg) translateZ(100px);
-}
-* body .loading_page .wrap .cube svg:nth-child(6) {
-  transform: rotateX(90deg) translateZ(100px);
+@media (max-width: 960px) {
+  * body .loading_page svg {
+    width: 54.83vw;
+    transform: rotate(90deg);
+    bottom: unset;
+    top: 0;
+    left: -15%;
+    transform: translate(0, -150%);
+  }
 }
 * body .loading_page p {
   position: absolute;
-  font-size: 100px;
-  color: red;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: 600;
+  margin: 0;
+  top: 9.54%;
+  left: 65.1%;
+  font-family: didot;
+  font-size: clamp(92px, 14.0625vw, 270px);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.768627451);
+  transition: 0.5s;
+  transform: translate(150%, 0);
+}
+@media (max-width: 960px) {
+  * body .loading_page p {
+    top: 80%;
+    right: 65.1%;
+    transform: translate(0, 150%);
+  }
 }
 * body header {
   height: 100vh;
@@ -158,7 +142,7 @@
 * body header .burger nav.open {
   height: 100vh;
 }
-* body header .burger nav p {
+* body header .burger nav .YTDlogo {
   font-family: didot;
   font-size: clamp(11px, 1.25vw, 24px);
   font-weight: 700;
@@ -167,6 +151,7 @@
   top: 8.98%;
   left: 7.86%;
   font-style: italic;
+  text-decoration: none;
 }
 * body header .burger nav .nav_content {
   display: flex;

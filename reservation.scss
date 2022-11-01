@@ -21,13 +21,53 @@
             display: none;
         }
     }
+    .loading_page {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        overflow: hidden;
+        background-color: #fff;
+    
+        svg {
+            position: absolute;
+            bottom: 0;
+            width: 66.875vw;
+            transition: 0.5s;
+            transform: translate(-100%, 0);
+    
+            @media(max-width: 960px) {
+                width: 54.83vw;
+                transform: rotate(90deg);
+                bottom: unset;
+                top: 0;
+                left: -15%;
+                transform: translate(0, -150%);
+            }
+        }
+    
+        p {
+            position: absolute;
+            margin: 0;
+            top: 9.54%;
+            left: 65.1%;
+            @include font(didot, 92px, 14.0625vw, 270px, 400, #000000C4);
+            transition: 0.5s;
+            transform: translate(150%, 0);
+    
+            @media(max-width: 960px) {
+                top: 80%;
+                right: 65.1%;
+                transform: translate(0, 150%);
+            }
+        }
+    }
 
     header{
         overflow: hidden;
         .burger {
             position: fixed;
-            left: 0;
-            top: 0;
             width: 100%;
             justify-content: space-between;
             transition: all 0.5s;
@@ -62,12 +102,13 @@
                     height: 100vh;
                 }
 
-                p {
+                .YTDlogo{
                     @include font(didot, 11px, 1.25vw, 24px, 700, white);
                     position: absolute;
                     top: 8.98%;
                     left: 7.86%;
                     font-style: italic;
+                    text-decoration: none;
                 }
 
                 .nav_content {
