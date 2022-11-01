@@ -1,93 +1,49 @@
-:root {
-    background: white;
+@import '_var';
+
+// --mixin--
+@mixin font($ff: '標楷體', $minfz: 12px, $nowfz: 1.5vw, $maxfz: 64px, $fw: normal, $c: #000) {
+    font-family: $ff;
+    font-size: clamp($minfz, $nowfz, $maxfz);
+    font-weight: $fw;
+    color: $c;
 }
 
-@keyframes loop {
-    from {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
 
-    to {
-        transform: rotateX(360deg) rotateY(360deg);
-    }
+@mixin picsize($minW, $nowW, $maxW) {
+    width: clamp($minW, $nowW, $maxW);
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    .loading_page {
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-
-        .wrap {
-            display: flex;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            width: 500px;
-            height: 500px;
-            /*   margin-top: 150px; */
-            perspective: 50px;
-            perspective-origin: 50% 50%;
-            border-radius: 50%;
-            overflow: hidden;
-
-            .cube {
-                transform-style: preserve-3d;
-                width: 200px;
-                height: 200px;
-                margin: auto;
-                position: relative;
-                animation: loop 6s linear;
-
-                svg {
-                    width: 200px;
-                    height: 200px;
-                    background: white;
-                    border: 1px solid #aba;
-                    border-radius: 3px;
-                    position: absolute;
-                    opacity: 0.9;
-
-                    &:nth-child(1) {
-                        transform: rotateY(0deg) translateZ(100px);
-                    }
-
-                    &:nth-child(2) {
-                        transform: rotateY(90deg) translateZ(100px);
-                    }
-
-                    &:nth-child(3) {
-                        transform: rotateY(180deg) translateZ(100px);
-                    }
-
-                    &:nth-child(4) {
-                        transform: rotateY(-90deg) translateZ(100px);
-                    }
-
-                    &:nth-child(5) {
-                        transform: rotateX(270deg) translateZ(100px);
-                    }
-
-                    &:nth-child(6) {
-                        transform: rotateX(90deg) translateZ(100px);
-                    }
-                }
-            }
-
+.loading_page {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    svg {
+        position: absolute;
+        bottom: 0;
+        width: 66.875vw;
+        transition: 0.5s;
+        transform: translate(-100%,0);
+        @media(max-width: 960px){
+            width: 54.83vw;
+            transform: rotate(90deg);
+            bottom: unset;
+            top: 0;
+            left: -15%;
+            transform: translate(0,-150%);
         }
-
-        p {
-            position: absolute;
-            font-size: 50px;
-            color: #aba;
+    }
+    p{
+        position: absolute;
+        margin: 0;
+        top: 9.54%;
+        left: 65.1%;
+        @include font(didot,92px ,14.0625vw ,270px ,400 ,#000000C4 );
+        transition: 0.5s;
+        transform: translate(150%,0);
+        @media(max-width: 960px){
             top: 80%;
-            left: 80%;
-            font-weight: 600;
+            right: 65.1%;
+            transform: translate(0,150%);
         }
     }
 }

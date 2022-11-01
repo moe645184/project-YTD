@@ -428,6 +428,12 @@ body {
                 position: absolute;
                 top: 1227px;
                 left: 73.02%;
+                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
+                filter: grayscale(100%) contrast(50);
+                &:hover{
+                filter: grayscale(0%) contrast(150%);
+                transform: scale(1.2);
+                }
 
                 @media (max-width:992px) {
                     top: 1027px;
@@ -448,6 +454,12 @@ body {
                 position: absolute;
                 top: 1310px;
                 left: 54.8%;
+                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
+                filter: grayscale(100%) contrast(50);
+                &:hover{
+                filter: grayscale(0%) contrast(150%);
+                transform: scale(1.2);
+                }
 
                 @media (max-width:992px) {
                     top: 1050px;
@@ -468,6 +480,12 @@ body {
                 position: absolute;
                 top: 1740px;
                 left: 50.93%;
+                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
+                filter: grayscale(100%) contrast(50);
+                &:hover{
+                filter: grayscale(0%) contrast(150%);
+                transform: scale(1.2);
+                }
 
                 @media (max-width:992px) {
                     top: 1300px;
@@ -488,6 +506,12 @@ body {
                 position: absolute;
                 top: 1658px;
                 left: 65.67%;
+                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
+                filter: grayscale(100%) contrast(50);
+                &:hover{
+                filter: grayscale(0%) contrast(150%);
+                transform: scale(1.2);
+                }
 
                 @media (max-width:992px) {
                     top: 1258px;
@@ -508,6 +532,12 @@ body {
                 position: absolute;
                 top: 1805px;
                 left: 21.04%;
+                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
+                filter: grayscale(100%) contrast(50);
+                &:hover{
+                filter: grayscale(0%) contrast(150%);
+                transform: scale(1.2);
+                }
 
                 @media (max-width:992px) {
                     top: 1305px;
@@ -529,6 +559,12 @@ body {
                 position: absolute;
                 top: 1672px;
                 left: 34.63%;
+                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
+                filter: grayscale(100%) contrast(50);
+                &:hover{
+                filter: grayscale(0%) contrast(150%);
+                transform: scale(1.2);
+                }
 
                 @media (max-width:992px) {
                     top: 1272px;

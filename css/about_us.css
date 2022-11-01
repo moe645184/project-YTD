@@ -445,6 +445,12 @@ body main .sub-content .upper-right-portrait {
   position: absolute;
   top: 1227px;
   left: 73.02%;
+  transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
+  filter: grayscale(100%) contrast(50);
+}
+body main .sub-content .upper-right-portrait:hover {
+  filter: grayscale(0%) contrast(150%);
+  transform: scale(1.2);
 }
 @media (max-width: 992px) {
   body main .sub-content .upper-right-portrait {
@@ -467,6 +473,12 @@ body main .sub-content .upper-left-portrait {
   position: absolute;
   top: 1310px;
   left: 54.8%;
+  transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
+  filter: grayscale(100%) contrast(50);
+}
+body main .sub-content .upper-left-portrait:hover {
+  filter: grayscale(0%) contrast(150%);
+  transform: scale(1.2);
 }
 @media (max-width: 992px) {
   body main .sub-content .upper-left-portrait {
@@ -489,6 +501,12 @@ body main .sub-content .lower-middle-portrait {
   position: absolute;
   top: 1740px;
   left: 50.93%;
+  transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
+  filter: grayscale(100%) contrast(50);
+}
+body main .sub-content .lower-middle-portrait:hover {
+  filter: grayscale(0%) contrast(150%);
+  transform: scale(1.2);
 }
 @media (max-width: 992px) {
   body main .sub-content .lower-middle-portrait {
@@ -511,6 +529,12 @@ body main .sub-content .lower-right-portrait {
   position: absolute;
   top: 1658px;
   left: 65.67%;
+  transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
+  filter: grayscale(100%) contrast(50);
+}
+body main .sub-content .lower-right-portrait:hover {
+  filter: grayscale(0%) contrast(150%);
+  transform: scale(1.2);
 }
 @media (max-width: 992px) {
   body main .sub-content .lower-right-portrait {
@@ -533,6 +557,12 @@ body main .sub-content .lower-left-portrait-1 {
   position: absolute;
   top: 1805px;
   left: 21.04%;
+  transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
+  filter: grayscale(100%) contrast(50);
+}
+body main .sub-content .lower-left-portrait-1:hover {
+  filter: grayscale(0%) contrast(150%);
+  transform: scale(1.2);
 }
 @media (max-width: 992px) {
   body main .sub-content .lower-left-portrait-1 {
@@ -556,6 +586,12 @@ body main .sub-content .lower-left-portrait-2 {
   position: absolute;
   top: 1672px;
   left: 34.63%;
+  transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
+  filter: grayscale(100%) contrast(50);
+}
+body main .sub-content .lower-left-portrait-2:hover {
+  filter: grayscale(0%) contrast(150%);
+  transform: scale(1.2);
 }
 @media (max-width: 992px) {
   body main .sub-content .lower-left-portrait-2 {
