@@ -34,6 +34,8 @@ setTimeout(function() {
     bannerVideo.play()
 },3300)
 
+screen.width < 500 ? bannerVideo.src = "./home_img/phone_YesTerDay.mp4" : bannerVideo.src = "./home_img/video_banner.mp4"
+
 window.addEventListener('resize',function() {
     if(window.innerWidth <500){
         bannerVideo.src = "./home_img/phone_YesTerDay.mp4" 
@@ -160,8 +162,6 @@ const goalPath = document.querySelector('.goal >svg>path')
 const photoPath = document.querySelector('.svg_photo>path')
 const graphyPath = document.querySelector('.svg_graphy>path')
 const studioPath = document.querySelector('.svg_studio>path')
-
-
 
 
 window.addEventListener('scroll',()=>{

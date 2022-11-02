@@ -10,10 +10,6 @@
   font-family: hind;
   src: url(../font-family/Hind-Regular.ttf);
 }
-@font-face {
-  font-family: playfair;
-  src: url(../font-family/PlayfairDisplay-VariableFont_wght.ttf);
-}
 * {
   margin: 0;
   padding: 0;
@@ -84,13 +80,18 @@ body header .burger svg {
   top: 7.41vh;
   left: 4.8%;
 }
+@media (max-width: 600px) {
+  body header .burger svg {
+    display: none;
+  }
+}
 body header .burger .burger_btn_open {
   cursor: pointer;
   position: absolute;
   top: 7.41vh;
   right: 4.53%;
   font-family: "";
-  font-size: clamp(16px, 2.6vw, 50px);
+  font-size: clamp(32px, 2.6vw, 50px);
   font-weight: 100;
   color: rgba(137, 137, 137, 0.4);
 }
@@ -116,6 +117,7 @@ body header .burger nav .YTDlogo {
   top: 8.98%;
   left: 7.86%;
   text-decoration: none;
+  font-style: italic;
 }
 body header .burger nav .nav_content {
   display: flex;
@@ -129,7 +131,6 @@ body header .burger nav .nav_content img {
 }
 body header .burger nav .nav_content ul {
   list-style: none;
-  font-style: italic;
   margin-left: 4.32%;
 }
 body header .burger nav .nav_content ul li {
@@ -153,11 +154,22 @@ body header .burger .totop {
   position: fixed;
   right: 5%;
   bottom: 5%;
+  border-radius: 50%;
+  height: 3.5vw;
+  width: 3.5vw;
   text-decoration: none;
-  font-family: playfair;
-  font-size: clamp(16px, 1.875vw, 36px);
+  text-align: center;
+  line-height: 3.5vw;
+  background-color: #fff;
+  font-family: Playfair Display;
+  font-size: clamp(16px, 1vw, 19.2px);
   font-weight: 600;
-  color: #C6C4C4;
+  color: #6A6969;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+body header .burger .totop:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 body header .burger.active {
   opacity: 1;
@@ -171,14 +183,29 @@ body main svg {
   top: 0;
   left: 0;
 }
+@media (max-width: 1600px) {
+  body main svg {
+    height: 350px;
+  }
+}
+@media (max-width: 1400px) {
+  body main svg {
+    height: 300px;
+  }
+}
 @media (max-width: 992px) {
   body main svg {
     height: 250px;
   }
 }
+@media (max-width: 800px) {
+  body main svg {
+    height: 200px;
+  }
+}
 @media (max-width: 525px) {
   body main svg {
-    height: 120px;
+    height: 100px;
   }
 }
 body main .photographer_picture {
@@ -199,7 +226,7 @@ body main .photographer_picture {
   }
 }
 body main .about_photographer h2 {
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(20px, 1.875vw, 36px);
   font-weight: 600;
   color: black;
@@ -336,7 +363,7 @@ body main .about_photographer p {
   }
 }
 body main .about_photographer a {
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(12px, 1.25vw, 20px);
   font-weight: 600;
   color: #898989;
@@ -553,6 +580,11 @@ body main .sub-content .lower-middle-portrait:hover {
   filter: grayscale(0%) contrast(150%);
   transform: scale(1.2);
 }
+@media (max-width: 1600px) {
+  body main .sub-content .lower-middle-portrait {
+    top: 1600px;
+  }
+}
 @media (max-width: 992px) {
   body main .sub-content .lower-middle-portrait {
     top: 1300px;
@@ -580,6 +612,11 @@ body main .sub-content .lower-right-portrait {
 body main .sub-content .lower-right-portrait:hover {
   filter: grayscale(0%) contrast(150%);
   transform: scale(1.2);
+}
+@media (max-width: 1600px) {
+  body main .sub-content .lower-right-portrait {
+    top: 1558px;
+  }
 }
 @media (max-width: 992px) {
   body main .sub-content .lower-right-portrait {
@@ -609,6 +646,11 @@ body main .sub-content .lower-left-portrait-1:hover {
   filter: grayscale(0%) contrast(150%);
   transform: scale(1.2);
 }
+@media (max-width: 1600px) {
+  body main .sub-content .lower-left-portrait-1 {
+    top: 1625px;
+  }
+}
 @media (max-width: 992px) {
   body main .sub-content .lower-left-portrait-1 {
     top: 1305px;
@@ -637,6 +679,11 @@ body main .sub-content .lower-left-portrait-2 {
 body main .sub-content .lower-left-portrait-2:hover {
   filter: grayscale(0%) contrast(150%);
   transform: scale(1.2);
+}
+@media (max-width: 1600px) {
+  body main .sub-content .lower-left-portrait-2 {
+    top: 1572px;
+  }
 }
 @media (max-width: 992px) {
   body main .sub-content .lower-left-portrait-2 {
@@ -678,13 +725,14 @@ body footer .vertical-line {
   }
 }
 body footer small {
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(10px, 1.25vw, 24px);
   font-weight: 700;
   color: #898989;
   line-height: 32px;
   letter-spacing: 0.02em;
   position: absolute;
+  padding-bottom: 5vh;
   top: 2602px;
   left: 35.2%;
 }

@@ -26,8 +26,6 @@
         overflow: hidden;
         .burger {
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             justify-content: space-between;
             transition: all 0.5s;
@@ -38,6 +36,9 @@
                 position: absolute;
                 top: 7.41vh;
                 left: 4.8%;
+                @media (max-width:600px) {
+                    display: none;
+                }
             }
 
             .burger_btn_open {
@@ -45,7 +46,7 @@
                 position: absolute;
                 top: 7.41vh;
                 right: 4.53%;
-                @include font('', 16px, 2.6vw, 50px, 100, #89898966)
+                @include font('', 32px, 2.6vw, 50px, 100, #89898966);
             }
 
             nav {
@@ -62,12 +63,13 @@
                     height: 100vh;
                 }
 
-                .YTDlogo{
+                .YTDlogo {
                     @include font(didot, 11px, 1.25vw, 24px, 700, white);
                     position: absolute;
                     top: 8.98%;
                     left: 7.86%;
                     text-decoration: none;
+                    font-style: italic;
                 }
 
                 .nav_content {
@@ -83,7 +85,6 @@
 
                     ul {
                         list-style: none;
-                        font-style: italic;
                         margin-left: 4.32%;
 
                         li {
@@ -110,8 +111,19 @@
                 position: fixed;
                 right: 5%;
                 bottom: 5%;
+                border-radius: 50%;
+                height: 3.5vw;
+                width: 3.5vw;
                 text-decoration: none;
-                @include font(playfair, 16px, 1.875vw, 36px, 600, #C6C4C4);
+                text-align: center;
+                line-height: 3.5vw;
+                background-color: #fff;
+                @include font(Playfair Display, 16px, 1vw, 19.2px, 600, #6A6969);
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+                &:active{
+                    transform:translate(2px, 2px);
+                    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+                    }
             }
 
             &.active {
@@ -132,16 +144,6 @@
         width: 100%;
         height: 100vh;
         position: relative;
-    }
-    .burger{
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        right: 20px;
-        @media (max-width:600px) {
-            top:6vh;
-            right: 1vw;
-        }
     }
     .YTD{
         @include font('didot',30px ,5.21vw ,100px ,normal ,#000 );
@@ -238,7 +240,7 @@
         width: 18.2vw;
         display: flex;
         position: relative;
-        margin-right: 2vw;
+        margin: 0 1vw;
         @media (max-width:900px) {
             width: 19vw;
             margin-top: 2vh;
@@ -476,6 +478,13 @@
             bottom:33vh;
         }
     }
+
+    .ntd_idphoto{
+        @media (max-width:600px) {
+            bottom:37vh;
+        }
+    }
+
     .ntd_orgi_petphoto,.ntd_artist{
         @media (max-width:600px) {
             bottom:41vh;

@@ -34,6 +34,9 @@ header {
             position: absolute;
             top: 7.41vh;
             left: 4.8%;
+            @media (max-width:600px) {
+                display: none;
+            }
         }
 
         .burger_btn_open {
@@ -41,7 +44,7 @@ header {
             position: absolute;
             top: 7.41vh;
             right: 4.53%;
-            @include font('', 16px, 2.6vw, 50px, 100, #89898966)
+            @include font('', 32px, 2.6vw, 50px, 100, #89898966);
         }
 
         nav {
@@ -58,12 +61,13 @@ header {
                 height: 100vh;
             }
 
-            .YTDlogo{
+            .YTDlogo {
                 @include font(didot, 11px, 1.25vw, 24px, 700, white);
                 position: absolute;
                 top: 8.98%;
                 left: 7.86%;
                 text-decoration: none;
+                font-style: italic;
             }
 
             .nav_content {
@@ -79,7 +83,6 @@ header {
 
                 ul {
                     list-style: none;
-                    font-style: italic;
                     margin-left: 4.32%;
 
                     li {
@@ -106,8 +109,19 @@ header {
             position: fixed;
             right: 5%;
             bottom: 5%;
+            border-radius: 50%;
+            height: 3.5vw;
+            width: 3.5vw;
             text-decoration: none;
-            @include font(playfair, 16px, 1.875vw, 36px, 600, #C6C4C4);
+            text-align: center;
+            line-height: 3.5vw;
+            background-color: #fff;
+            @include font(Playfair Display, 16px, 1vw, 19.2px, 600, #6A6969);
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+            &:active{
+                transform:translate(2px, 2px);
+                box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+                }
         }
 
         &.active {
@@ -189,7 +203,7 @@ header {
             }
 
             h2 {
-                @include font(playfair, 12px, 1.88vw, 36px, 700, #898989);
+                @include font(Playfair Display, 12px, 1.88vw, 36px, 700, #898989);
                 line-height: 100px;
 
                 @media (max-width:922px) {
@@ -255,7 +269,7 @@ main {
     }
 
     h2 {
-        @include font(playfair, 30px, 5.21vw, 100px, 400, #000000);
+        @include font(Playfair Display, 30px, 5.21vw, 100px, 400, #000000);
         font-style: italic;
         text-transform: capitalize;
         line-height: 120px;
@@ -299,11 +313,11 @@ main {
         top: 2365px;
 
         .left-quote {
-            @include font(playfair, 12px, 1.88vw, 36px, 700, #FFFFFF);
+            @include font(Playfair Display, 12px, 1.88vw, 36px, 700, #FFFFFF);
             text-transform: capitalize;
             line-height: 100px;
             position: absolute;
-            top: 89px;
+            top: 59px;
             left: 7.24%;
 
             @media (max-width:922px) {
@@ -318,11 +332,11 @@ main {
         }
 
         .right-quote {
-            @include font(playfair, 12px, 1.88vw, 36px, 700, #FFFFFF);
+            @include font(Playfair Display, 12px, 1.88vw, 36px, 700, #FFFFFF);
             text-transform: capitalize;
             line-height: 100px;
             position: absolute;
-            top: 89px;
+            top: 59px;
             left: 62.4%;
 
             @media (max-width:922px) {
@@ -449,13 +463,13 @@ main {
         }
 
         @media (max-width:390px) {
-            top: 1012px;
+            top: 1062px;
             left: 65px;
         }
     }
 
     .goal-text {
-        @include font(playfair, 12px, 1.88vw, 36px, 400, rgba(0, 0, 0, 0.5));
+        @include font(Playfair Display, 12px, 1.88vw, 36px, 400, rgba(0, 0, 0, 0.5));
         position: absolute;
         top: 4104px;
         left: 14.947%;
@@ -472,7 +486,7 @@ main {
     }
 
     .address {
-        @include font(playfair, 12px, 1.88vw, 36px, 400, #000000);
+        @include font(Playfair Display, 12px, 1.88vw, 36px, 400, #000000);
             display: none;
         @media (max-width:520px) {
             position: absolute;
@@ -483,7 +497,7 @@ main {
         @media (max-width:390px) {
             position: absolute;
             display: block;
-            top: 1085px;
+            top: 1135px;
             left: 65px;
         }
     }
@@ -495,10 +509,11 @@ main {
 }
 
 small {
-    @include font(playfair, 10px, 1.25vw, 24px, 700, #898989);
+    @include font(Playfair Display, 10px, 1.25vw, 24px, 700, #898989);
     line-height: 32px;
     letter-spacing: 0.02em;
     position: absolute;
+    padding-bottom: 5vh;
     top: 4427px;
     left: 34.27%;
 

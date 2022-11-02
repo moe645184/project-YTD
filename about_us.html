@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/about_us.css">
 </head>
 
-<body>
+<body oncontextmenu=self.event.returnValue=false>
     <header>
         <div class="burger">
             <svg width="96" height="32" viewBox="0 0 96 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,10 +145,10 @@
 
         function Function4() {
             let subContentH2 = document.querySelector('.sub-content-h2');
-            subContentH2.classList.remove('.sub-content-h2-1');
+            subContentH2.classList.remove('sub-content-h2-1');
             subContentH2.innerHTML = "Together,";
             let subContentP = document.querySelector(".sub-content-p");
-            subContentP.classList.remove('.sub-content-p-1');
+            subContentP.classList.remove('sub-content-p-1');
             subContentP.innerHTML = "we make the best memories";
         }
 

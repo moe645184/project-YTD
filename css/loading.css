@@ -10,10 +10,6 @@
   font-family: hind;
   src: url(../font-family/Hind-Regular.ttf);
 }
-@font-face {
-  font-family: playfair;
-  src: url(../font-family/PlayfairDisplay-VariableFont_wght.ttf);
-}
 .loading_page {
   position: fixed;
   top: 0;

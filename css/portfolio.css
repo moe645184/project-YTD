@@ -10,10 +10,6 @@
   font-family: hind;
   src: url(../font-family/Hind-Regular.ttf);
 }
-@font-face {
-  font-family: playfair;
-  src: url(../font-family/PlayfairDisplay-VariableFont_wght.ttf);
-}
 @keyframes loop {
   from {
     transform: rotateX(0deg) rotateY(0deg);
@@ -43,22 +39,27 @@
 }
 * body header .burger svg {
   position: absolute;
-  top: 7.41vh;
+  top: 50vh;
   left: 4.8%;
+}
+@media (max-width: 600px) {
+  * body header .burger svg {
+    display: none;
+  }
 }
 * body header .burger .burger_btn_open {
   cursor: pointer;
   position: absolute;
-  top: 7.41vh;
+  top: 50vh;
   right: 4.53%;
   font-family: "";
-  font-size: clamp(16px, 2.6vw, 50px);
+  font-size: clamp(32px, 2.6vw, 50px);
   font-weight: 100;
   color: rgba(137, 137, 137, 0.4);
 }
 * body header .burger nav {
-  height: 0vh;
-  width: 100%;
+  height: 100vh;
+  width: 0%;
   position: absolute;
   top: 0;
   background-color: #000;
@@ -67,7 +68,7 @@
   z-index: 2;
 }
 * body header .burger nav.open {
-  height: 100vh;
+  width: 100%;
 }
 * body header .burger nav .YTDlogo {
   font-family: didot;
@@ -78,6 +79,7 @@
   top: 8.98%;
   left: 7.86%;
   text-decoration: none;
+  font-style: italic;
 }
 * body header .burger nav .nav_content {
   display: flex;
@@ -91,7 +93,6 @@
 }
 * body header .burger nav .nav_content ul {
   list-style: none;
-  font-style: italic;
   margin-left: 4.32%;
 }
 * body header .burger nav .nav_content ul li {
@@ -115,11 +116,22 @@
   position: fixed;
   right: 5%;
   bottom: 5%;
+  border-radius: 50%;
+  height: 3.5vw;
+  width: 3.5vw;
   text-decoration: none;
-  font-family: playfair;
-  font-size: clamp(16px, 1.875vw, 36px);
+  text-align: center;
+  line-height: 3.5vw;
+  background-color: #fff;
+  font-family: Playfair Display;
+  font-size: clamp(16px, 1vw, 19.2px);
   font-weight: 600;
-  color: #C6C4C4;
+  color: #6A6969;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+* body header .burger .totop:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 * body header .burger.active {
   opacity: 1;
@@ -146,7 +158,7 @@
   list-style: none;
 }
 * body header .portfolio_list li {
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(28px, 2.6vw, 50px);
   font-weight: 600;
   color: #898989;
@@ -177,6 +189,9 @@
 }
 * body main .light_box .light_box_card img {
   width: 50%;
+}
+* body main .light_box .light_box_card img.shorten {
+  width: 30%;
 }
 * body main .light_box .light_box_card img.light_box_show {
   object-fit: contain;
@@ -211,7 +226,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(50px, 7.81vw, 150px);
   font-weight: 400;
   color: #000000;
@@ -227,6 +242,12 @@
   * body main .commercial .commercial_portfolio {
     flex-wrap: wrap;
     height: 1300vh;
+  }
+}
+@media (max-width: 600px) {
+  * body main .commercial .commercial_portfolio {
+    flex-wrap: wrap;
+    height: 900vh;
   }
 }
 * body main .commercial .commercial_portfolio .portfolio_commercial_column {
@@ -275,7 +296,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(50px, 7.81vw, 150px);
   font-weight: 400;
   color: #000000;
@@ -291,6 +312,12 @@
   * body main .portrait .portrait_portfolio {
     flex-wrap: wrap;
     height: 2500vh;
+  }
+}
+@media (max-width: 600px) {
+  * body main .portrait .portrait_portfolio {
+    flex-wrap: wrap;
+    height: 1400vh;
   }
 }
 * body main .portrait .portrait_portfolio .portfolio_portrait_column {
@@ -339,7 +366,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(50px, 7.81vw, 150px);
   font-weight: 400;
   color: #000000;
@@ -355,6 +382,12 @@
   * body main .selection .selection_portfolio {
     flex-wrap: wrap;
     height: 1100vh;
+  }
+}
+@media (max-width: 600px) {
+  * body main .selection .selection_portfolio {
+    flex-wrap: wrap;
+    height: 700vh;
   }
 }
 * body main .selection .selection_portfolio .portfolio_selection_column {
@@ -402,8 +435,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(50px, 7.81vw, 150px);
   font-weight: 400;
   color: #000000;
@@ -419,6 +453,12 @@
   * body main .record .record_portfolio {
     flex-wrap: wrap;
     height: 400vh;
+  }
+}
+@media (max-width: 600px) {
+  * body main .record .record_portfolio {
+    flex-wrap: wrap;
+    height: 200vh;
   }
 }
 * body main .record .record_portfolio .portfolio_record_column {
@@ -467,7 +507,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: playfair;
+  font-family: Playfair Display;
   font-size: clamp(50px, 7.81vw, 150px);
   font-weight: 400;
   color: #000000;
@@ -478,6 +518,12 @@
   height: 200vh;
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 1100px) {
+  * body main .film .film_portfolio {
+    flex-wrap: wrap;
+    height: 100vh;
+  }
 }
 * body main .film .film_portfolio .portfolio_film_column {
   width: 30%;
@@ -517,7 +563,7 @@
   text-align: center;
   font-family: didot;
   font-size: clamp(20px, 5vw, 96px);
-  font-weight: 700;
+  font-weight: 600;
   color: rgba(0, 0, 0, 0.3019607843);
   font-style: italic;
 }/*# sourceMappingURL=portfolio.css.map */
