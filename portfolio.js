@@ -1,3 +1,7 @@
+//warning
+
+console.log('%c 🚔🚔作品集照片皆為YTD工作室所有，請勿任意下載散布🚔🚔', 'font-size:20px;text-shadow:10px 10px 3px grey;font-family:fantasy;color:#ffa;font-style:italic;')
+
 //burger show & hidden
 
 const header = document.querySelector('header')

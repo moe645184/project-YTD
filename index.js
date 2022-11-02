@@ -171,8 +171,7 @@ window.addEventListener('scroll',()=>{
     if(scrollY>goal.offsetTop){ 
         goalPath.classList.add('svg_animation')
     }
-
-    if(scrollY>intro.offsetTop){
+    if(scrollY>goal.offsetTop + goal.clientHeight / 1.75){
         photoPath.classList.add('svg_animation')
         graphyPath.classList.add('svg_animation')
         studioPath.classList.add('svg_animation')
