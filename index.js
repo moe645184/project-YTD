@@ -168,7 +168,7 @@ window.addEventListener('scroll',()=>{
     if(scrollY>service.offsetTop){
         servicePath.classList.add('svg_animation')
     }
-    if(scrollY>goal.offsetTop){
+    if(scrollY>goal.offsetTop){ 
         goalPath.classList.add('svg_animation')
     }
 

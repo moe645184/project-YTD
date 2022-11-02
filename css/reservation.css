@@ -169,12 +169,14 @@
   color: #000;
   margin: 0;
   position: absolute;
-  left: 23vw;
+  left: 50%;
+  transform: translate(-50%, 0);
   top: 17vh;
 }
 @media (max-width: 600px) {
   * h1 {
-    left: 19vw;
+    left: 50%;
+    transform: translate(-50%, 0);
     top: 12vh;
     font-size: 32px;
   }
@@ -201,7 +203,8 @@
 * .header_pics {
   position: absolute;
   top: 40vh;
-  left: 8vw;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: flex;
 }
 @media (max-width: 900px) {
@@ -599,8 +602,8 @@
   }
 }
 * #other {
-  width: 70vw;
-  margin: 4.6vh 0 0 30vw;
+  width: 40vw;
+  margin: 4.6vh 0 0 60vw;
 }
 * .title_pro {
   width: 60vw;

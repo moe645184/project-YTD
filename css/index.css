@@ -146,6 +146,7 @@
   top: 8.98%;
   left: 7.86%;
   text-decoration: none;
+  font-style: italic;
 }
 * body header .burger nav .nav_content {
   display: flex;
@@ -159,7 +160,6 @@
 }
 * body header .burger nav .nav_content ul {
   list-style: none;
-  font-style: italic;
   margin-left: 4.32%;
 }
 * body header .burger nav .nav_content ul li {
@@ -856,7 +856,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   top: 23.94%;
-  font-family: diot;
+  font-family: didot;
   font-size: clamp(28px, 2.708vw, 52px);
   font-weight: 400;
   color: #898989;
@@ -928,58 +928,17 @@
     top: 17.77%;
   }
 }
-* body main .contact .QRcode_line {
+* body main .contact .QRcode {
   position: absolute;
   top: 45.7%;
   left: 9.69%;
-  width: clamp(116px, 7.4vw, 142px);
+  width: 300px;
 }
 @media (max-width: 875px) {
-  * body main .contact .QRcode_line {
-    left: 13.3%;
+  * body main .contact .QRcode {
+    left: 50%;
     top: 56.45%;
-  }
-}
-* body main .contact .line_name {
-  position: absolute;
-  top: 55.06%;
-  left: 9.69%;
-  font-family: playfair;
-  font-size: clamp(24px, 1.25vw, 24px);
-  font-weight: 600;
-  color: #898989;
-}
-@media (max-width: 875px) {
-  * body main .contact .line_name {
-    left: 13.3%;
-    top: 66.19%;
-  }
-}
-* body main .contact .QRcode_IG {
-  position: absolute;
-  top: 45.7%;
-  left: 25.56%;
-  width: clamp(116px, 7.4vw, 142px);
-}
-@media (max-width: 875px) {
-  * body main .contact .QRcode_IG {
-    left: 53.4%;
-    top: 56.45%;
-  }
-}
-* body main .contact .IG_name {
-  position: absolute;
-  top: 55.06%;
-  left: 25.56%;
-  font-family: playfair;
-  font-size: clamp(24px, 1.25vw, 24px);
-  font-weight: 600;
-  color: #898989;
-}
-@media (max-width: 875px) {
-  * body main .contact .IG_name {
-    left: 52.93%;
-    top: 66.19%;
+    transform: translate(-50%, 0);
   }
 }
 * body main .contact label {
@@ -1090,11 +1049,14 @@
   top: 65.88%;
   left: 67.03%;
   width: clamp(160px, 10.42vw, 200px);
-  height: clamp(40px, 2.6vw, 50px);
+  height: clamp(40px, 3.65vw, 70px);
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
   font-family: playfair;
   font-size: clamp(18px, 1.25vw, 24px);
   font-weight: 700;
-  color: #898989;
+  color: #6A6969;
   border: none;
   cursor: pointer;
 }
