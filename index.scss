@@ -235,7 +235,7 @@
                 animation: textshow 2s linear 1s 1 forwards;
                 text-decoration: none;
                 &.font {
-                    @include font(ryumin, 12px, 1.77vw, 34px, bold, #FFFFFFCC);
+                    @include font(hind, 12px, 1.77vw, 34px, bold, #FFFFFFCC);
                     text-decoration-line: underline;
                 }
             }
@@ -249,7 +249,7 @@
                 animation: textshow 2s linear 1s 1 forwards;
                 text-decoration: none;
                 &.font {
-                    @include font(ryumin, 12px, 1.77vw, 34px, bold, #FFFFFFCC);
+                    @include font(hind, 12px, 1.77vw, 34px, bold, #FFFFFFCC);
                     text-decoration-line: underline;
                 }
             }
@@ -955,7 +955,7 @@
                 }
 
                 label {
-                    border: 2px solid grey;
+                    border: 1px solid grey;
                     width: 38.23vw;
                     height: 4.06vw;
                     margin-bottom: 20px;

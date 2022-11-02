@@ -222,7 +222,7 @@
   text-decoration: none;
 }
 * body header .header_btn_reservation.font {
-  font-family: ryumin;
+  font-family: hind;
   font-size: clamp(12px, 1.77vw, 34px);
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
@@ -241,7 +241,7 @@
   text-decoration: none;
 }
 * body header .header_btn_portfolio.font {
-  font-family: ryumin;
+  font-family: hind;
   font-size: clamp(12px, 1.77vw, 34px);
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
@@ -983,7 +983,7 @@
   }
 }
 * body main .contact label {
-  border: 2px solid grey;
+  border: 1px solid grey;
   width: 38.23vw;
   height: 4.06vw;
   margin-bottom: 20px;
