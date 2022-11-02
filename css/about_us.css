@@ -90,8 +90,8 @@ body header .burger .burger_btn_open {
   top: 7.41vh;
   right: 4.53%;
   font-family: "";
-  font-size: clamp(16px, 2.803vw, 40px);
-  font-weight: 500;
+  font-size: clamp(16px, 2.6vw, 50px);
+  font-weight: 100;
   color: rgba(137, 137, 137, 0.4);
 }
 body header .burger nav {
@@ -115,7 +115,6 @@ body header .burger nav .YTDlogo {
   position: absolute;
   top: 8.98%;
   left: 7.86%;
-  font-style: italic;
   text-decoration: none;
 }
 body header .burger nav .nav_content {
@@ -492,7 +491,7 @@ body main .sub-content .upper-right-portrait {
   top: 1227px;
   left: 73.02%;
   transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
-  filter: grayscale(100%) contrast(50);
+  filter: grayscale(100%);
 }
 body main .sub-content .upper-right-portrait:hover {
   filter: grayscale(0%) contrast(150%);
@@ -520,7 +519,7 @@ body main .sub-content .upper-left-portrait {
   top: 1310px;
   left: 54.8%;
   transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
-  filter: grayscale(100%) contrast(50);
+  filter: grayscale(100%);
 }
 body main .sub-content .upper-left-portrait:hover {
   filter: grayscale(0%) contrast(150%);
@@ -548,7 +547,7 @@ body main .sub-content .lower-middle-portrait {
   top: 1740px;
   left: 50.93%;
   transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
-  filter: grayscale(100%) contrast(50);
+  filter: grayscale(100%);
 }
 body main .sub-content .lower-middle-portrait:hover {
   filter: grayscale(0%) contrast(150%);
@@ -576,7 +575,7 @@ body main .sub-content .lower-right-portrait {
   top: 1658px;
   left: 65.67%;
   transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
-  filter: grayscale(100%) contrast(50);
+  filter: grayscale(100%);
 }
 body main .sub-content .lower-right-portrait:hover {
   filter: grayscale(0%) contrast(150%);
@@ -604,7 +603,7 @@ body main .sub-content .lower-left-portrait-1 {
   top: 1805px;
   left: 21.04%;
   transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
-  filter: grayscale(100%) contrast(50);
+  filter: grayscale(100%);
 }
 body main .sub-content .lower-left-portrait-1:hover {
   filter: grayscale(0%) contrast(150%);
@@ -633,7 +632,7 @@ body main .sub-content .lower-left-portrait-2 {
   top: 1672px;
   left: 34.63%;
   transition: 0.7s cubic-bezier(0.12, 1.43, 0, -0.45);
-  filter: grayscale(100%) contrast(50);
+  filter: grayscale(100%);
 }
 body main .sub-content .lower-left-portrait-2:hover {
   filter: grayscale(0%) contrast(150%);

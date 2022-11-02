@@ -85,7 +85,7 @@ body {
                 position: absolute;
                 top: 7.41vh;
                 right: 4.53%;
-                @include font('', 16px, 2.803vw, 40px, 500, #89898966)
+                @include font('', 16px, 2.6vw, 50px, 100, #89898966)
             }
 
             nav {
@@ -107,7 +107,6 @@ body {
                     position: absolute;
                     top: 8.98%;
                     left: 7.86%;
-                    font-style: italic;
                     text-decoration: none;
                 }
 
@@ -471,7 +470,7 @@ body {
                 top: 1227px;
                 left: 73.02%;
                 transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) contrast(50);
+                filter: grayscale(100%) ;
                 &:hover{
                 filter: grayscale(0%) contrast(150%);
                 transform: scale(1.2);
@@ -497,7 +496,7 @@ body {
                 top: 1310px;
                 left: 54.8%;
                 transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) contrast(50);
+                filter: grayscale(100%) ;
                 &:hover{
                 filter: grayscale(0%) contrast(150%);
                 transform: scale(1.2);
@@ -523,7 +522,7 @@ body {
                 top: 1740px;
                 left: 50.93%;
                 transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) contrast(50);
+                filter: grayscale(100%) ;
                 &:hover{
                 filter: grayscale(0%) contrast(150%);
                 transform: scale(1.2);
@@ -549,7 +548,7 @@ body {
                 top: 1658px;
                 left: 65.67%;
                 transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) contrast(50);
+                filter: grayscale(100%) ;
                 &:hover{
                 filter: grayscale(0%) contrast(150%);
                 transform: scale(1.2);
@@ -575,7 +574,7 @@ body {
                 top: 1805px;
                 left: 21.04%;
                 transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) contrast(50);
+                filter: grayscale(100%) ;
                 &:hover{
                 filter: grayscale(0%) contrast(150%);
                 transform: scale(1.2);
@@ -602,7 +601,7 @@ body {
                 top: 1672px;
                 left: 34.63%;
                 transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) contrast(50);
+                filter: grayscale(100%) ;
                 &:hover{
                 filter: grayscale(0%) contrast(150%);
                 transform: scale(1.2);

@@ -34,7 +34,14 @@ setTimeout(function() {
     bannerVideo.play()
 },3300)
 
+window.addEventListener('resize',function() {
+    if(window.innerWidth <500){
+        bannerVideo.src = "./home_img/phone_YesTerDay.mp4" 
+    }else{
+        bannerVideo.src = "./home_img/video_banner.mp4" 
+    }
 
+})
 //burger show & hidden
 
 const header = document.querySelector('header')
@@ -55,10 +62,12 @@ window.addEventListener('scroll', navshow)
 
 function changeFonts(self, text) {
     self.innerHTML = text
+    self.classList.toggle('font')
 }
 
 function changeFontsBack(self, text) {
     self.innerHTML = text
+    self.classList.toggle('font')
 }
 
 //text translation - content

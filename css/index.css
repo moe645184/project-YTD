@@ -41,11 +41,6 @@
     fill: #000;
   }
 }
-.font {
-  font-family: ryumin !important;
-  line-height: 30px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -125,8 +120,8 @@
   top: 7.41vh;
   right: 4.53%;
   font-family: "";
-  font-size: clamp(16px, 2.803vw, 40px);
-  font-weight: 500;
+  font-size: clamp(16px, 2.6vw, 50px);
+  font-weight: 100;
   color: rgba(137, 137, 137, 0.4);
 }
 * body header .burger nav {
@@ -150,7 +145,6 @@
   position: absolute;
   top: 8.98%;
   left: 7.86%;
-  font-style: italic;
   text-decoration: none;
 }
 * body header .burger nav .nav_content {
@@ -227,6 +221,13 @@
   animation: textshow 2s linear 1s 1 forwards;
   text-decoration: none;
 }
+* body header .header_btn_reservation.font {
+  font-family: ryumin;
+  font-size: clamp(12px, 1.77vw, 34px);
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration-line: underline;
+}
 * body header .header_btn_portfolio {
   font-family: hind;
   font-size: clamp(12px, 1.25vw, 24px);
@@ -238,6 +239,13 @@
   opacity: 0;
   animation: textshow 2s linear 1s 1 forwards;
   text-decoration: none;
+}
+* body header .header_btn_portfolio.font {
+  font-family: ryumin;
+  font-size: clamp(12px, 1.77vw, 34px);
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration-line: underline;
 }
 * body main {
   overflow: hidden;
@@ -287,7 +295,7 @@
 * body main .service h3 {
   position: absolute;
   top: 72.13%;
-  left: 13.7%;
+  left: 12.5%;
   font-family: playfair;
   font-size: clamp(16px, 1.875vw, 36px);
   font-weight: 600;
@@ -313,6 +321,13 @@
   font-size: clamp(10px, 1.25vw, 24px);
   font-weight: 400;
   color: #000000;
+}
+* body main .service p.font {
+  font-family: ryumin;
+  font-size: clamp(10px, 1.25vw, 24px);
+  font-weight: 400;
+  color: #000000;
+  line-height: 30px;
 }
 @media (max-width: 1100px) {
   * body main .service p {
@@ -466,6 +481,13 @@
   font-size: clamp(10px, 1.25vw, 24px);
   font-weight: 400;
   color: #000000;
+}
+* body main .goal p.font {
+  font-family: ryumin;
+  font-size: clamp(10px, 1.25vw, 24px);
+  font-weight: 400;
+  color: #000000;
+  line-height: 30px;
 }
 @media (max-width: 1100px) {
   * body main .goal p {
@@ -929,7 +951,7 @@
 }
 @media (max-width: 875px) {
   * body main .contact .line_name {
-    left: 19.68%;
+    left: 13.3%;
     top: 66.19%;
   }
 }
@@ -961,7 +983,7 @@
   }
 }
 * body main .contact label {
-  border: 3px solid grey;
+  border: 2px solid grey;
   width: 38.23vw;
   height: 4.06vw;
   margin-bottom: 20px;
@@ -1030,6 +1052,9 @@
   font-weight: 600;
   color: #898989;
 }
+* body main .contact input:focus {
+  outline: none;
+}
 * body main .contact .message {
   height: 200px;
 }
@@ -1038,6 +1063,9 @@
   font-size: clamp(12px, 1.417vw, 20px);
   font-weight: 600;
   color: #898989;
+}
+* body main .contact .message textarea:focus {
+  outline: none;
 }
 * body main .contact p {
   position: absolute;
@@ -1068,6 +1096,11 @@
   font-weight: 700;
   color: #898989;
   border: none;
+  cursor: pointer;
+}
+* body main .contact button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 875px) {
   * body main .contact button {

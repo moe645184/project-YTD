@@ -21,48 +21,6 @@ body{
     &::-webkit-scrollbar {
         display: none;
     }
-    .loading_page {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 10;
-        overflow: hidden;
-        background-color: #fff;
-    
-        svg {
-            position: absolute;
-            bottom: 0;
-            width: 66.875vw;
-            transition: 0.5s;
-            transform: translate(-100%, 0);
-    
-            @media(max-width: 960px) {
-                width: 54.83vw;
-                transform: rotate(90deg);
-                bottom: unset;
-                top: 0;
-                left: -15%;
-                transform: translate(0, -150%);
-            }
-        }
-    
-        p {
-            position: absolute;
-            margin: 0;
-            top: 9.54%;
-            left: 65.1%;
-            @include font(didot, 92px, 14.0625vw, 270px, 400, #000000C4);
-            transition: 0.5s;
-            transform: translate(150%, 0);
-    
-            @media(max-width: 960px) {
-                top: 80%;
-                right: 65.1%;
-                transform: translate(0, 150%);
-            }
-        }
-    }
 header {
     .burger {
         position: fixed;
@@ -83,7 +41,7 @@ header {
             position: absolute;
             top: 7.41vh;
             right: 4.53%;
-            @include font('', 16px, 2.803vw, 40px, 500, #89898966)
+            @include font('', 16px, 2.6vw, 50px, 100, #89898966)
         }
 
         nav {
@@ -105,7 +63,6 @@ header {
                 position: absolute;
                 top: 8.98%;
                 left: 7.86%;
-                font-style: italic;
                 text-decoration: none;
             }
 
