@@ -138,14 +138,24 @@ body header .blog-logo {
   top: 321px;
   left: 19.4%;
 }
+@media (max-width: 1250px) {
+  body header .blog-logo {
+    top: 140px;
+  }
+}
 @media (max-width: 922px) {
   body header .blog-logo {
     top: 140px;
   }
 }
+@media (max-width: 690px) {
+  body header .blog-logo {
+    top: 40px;
+  }
+}
 @media (max-width: 390px) {
   body header .blog-logo {
-    top: 36px;
+    top: 0px;
     left: 50px;
   }
 }
@@ -541,7 +551,7 @@ body main .address {
   body main .address {
     position: absolute;
     display: block;
-    top: 1135px;
+    top: 1185px;
     left: 65px;
   }
 }

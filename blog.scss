@@ -141,12 +141,20 @@ header {
         top: 321px;
         left: 19.4%;
 
+        @media (max-width:1250px) {
+            top: 140px;
+        }
+
         @media (max-width:922px) {
             top: 140px;
         }
 
+        @media (max-width:690px) {
+            top: 40px;
+        }
+
         @media (max-width:390px) {
-            top: 36px;
+            top: 0px;
             left: 50px;
         }
     }
@@ -497,7 +505,7 @@ main {
         @media (max-width:390px) {
             position: absolute;
             display: block;
-            top: 1135px;
+            top: 1185px;
             left: 65px;
         }
     }
