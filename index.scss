@@ -124,15 +124,16 @@
                 opacity: 0;
                 z-index: 2;
 
-                svg {
+                .burger_logo {
                     position: absolute;
                     top: 7.41vh;
                     left: 4.8%;
+
                     @media (max-width:600px) {
                         display: none;
                     }
                 }
-    
+
                 .burger_btn_open {
                     cursor: pointer;
                     position: absolute;
@@ -212,10 +213,11 @@
                     background-color: #fff;
                     @include font(Playfair Display, 16px, 1vw, 19.2px, 600, #6A6969);
                     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
-                    &:active{
-                        transform:translate(2px, 2px);
+
+                    &:active {
+                        transform: translate(2px, 2px);
                         box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
-                        }
+                    }
                 }
 
                 &.active {
@@ -1095,7 +1097,7 @@
                 text-align: center;
                 position: absolute;
                 top: -7.4%;
-                @include font('Playfair Display', 10px, 1.25vw, 24px , normal, #898989 );
+                @include font('Playfair Display', 10px, 1.25vw, 24px, normal, #898989);
             }
         }
     }

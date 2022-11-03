@@ -27,13 +27,13 @@ body header .burger {
   opacity: 0;
   z-index: 2;
 }
-body header .burger svg {
+body header .burger .burger_logo {
   position: absolute;
   top: 7.41vh;
   left: 4.8%;
 }
 @media (max-width: 600px) {
-  body header .burger svg {
+  body header .burger .burger_logo {
     display: none;
   }
 }
