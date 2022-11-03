@@ -428,8 +428,8 @@ body main .quotations .mask {
 }
 @media (max-width: 1130px) {
   body main .quotations .mask {
-    width: 50vw;
-    left: 50%;
+    width: 30vw;
+    left: 70%;
     top: 160px;
   }
 }
@@ -506,11 +506,12 @@ body main .taichung-logo {
   width: clamp(258px, 38.7vw, 743px);
   position: absolute;
   top: 3881px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 6.25%;
 }
 @media (max-width: 922px) {
   body main .taichung-logo {
+    left: 50%;
+    transform: translate(-50%, 0);
     top: 2300px;
   }
 }
