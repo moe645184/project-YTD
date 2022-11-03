@@ -112,11 +112,11 @@ body {
                 right: 5%;
                 bottom: 5%;
                 border-radius: 50%;
-                height: 3.5vw;
-                width: 3.5vw;
+                height: 50px;
+                width: 50px;
                 text-decoration: none;
                 text-align: center;
-                line-height: 3.5vw;
+                line-height: 50px;
                 background-color: #fff;
                 @include font(Playfair Display, 16px, 1vw, 19.2px, 600, #6A6969);
                 box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
@@ -392,28 +392,28 @@ body {
 
             .mask {
                 @include picsize(170px, 45.99vw, 883px);
-                    position: absolute;
-                    top: 220px;
-                    left: 44.635%;
-                    overflow: hidden;
+                position: absolute;
+                top: 220px;
+                left: 44.635%;
+                overflow: hidden;
 
-                    @media (max-width:1626px) {
-                        left: 50%;
-                        top: 160px;
-                    }
+                @media (max-width:1626px) {
+                    left: 50%;
+                    top: 160px;
+                }
 
-                    @media (max-width:1130px) {
-                        width: 30vw;
-                        left: 70%;
-                        top: 160px;
-                    }
+                @media (max-width:1130px) {
+                    width: 30vw;
+                    left: 70%;
+                    top: 160px;
+                }
 
-                    @media (max-width:520px) {
-                        width: 45.99vw;
-                        top: 66px;
-                        left: 207px;
-                    }
-                
+                @media (max-width:520px) {
+                    width: 45.99vw;
+                    top: 66px;
+                    left: 207px;
+                }
+
                 .mountain-scenery {
                     @include picsize(170px, 45.99vw, 883px);
                 }
@@ -475,7 +475,8 @@ body {
             @include picsize(258px, 38.7vw, 743px);
             position: absolute;
             top: 3881px;
-            left: 6.25%;
+            left: 50%;
+            transform: translate(-50%,0);
 
             @media (max-width:922px) {
                 top: 2300px;
@@ -483,12 +484,10 @@ body {
 
             @media (max-width:520px) {
                 top: 1050px;
-                left: 65px;
             }
 
             @media (max-width:390px) {
                 top: 1062px;
-                left: 65px;
             }
         }
 
@@ -516,15 +515,15 @@ body {
             @media (max-width:520px) {
                 position: absolute;
                 display: block;
-                top: 1100px;
-                left: 65px;
+                top: 1150px;
+                left: 50%;
+                transform: translate(-50%,0);
             }
 
             @media (max-width:390px) {
                 position: absolute;
                 display: block;
                 top: 1185px;
-                left: 65px;
             }
         }
 
@@ -535,22 +534,52 @@ body {
         }
     }
 
-    small {
-        @include font(Playfair Display, 10px, 1.25vw, 24px, normal, #898989);
-        line-height: 32px;
-        letter-spacing: 0.02em;
-        position: absolute;
-        padding-bottom: 5vh;
+    footer {
         top: 4427px;
-        left: 50%;
-        transform: translate(-50%,0);
-
-        @media (max-width:922px) {
-            top: 2600px;
+        height: 200px;
+        width: 100%;
+        position: absolute;
+        @media (max-width:922px) { 
+            top: 2500px;
+            @media (max-width:520px) {
+                top: 1300px;
+            }
         }
 
-        @media (max-width:520px) {
-            top: 1233px;
+        hr {
+            position: absolute;
+            top: -80%;
+            left: 50%;
+            height: 200px;
+            width: 0.5px;
+            border-width: 0;
+            background-color: #D9D9D9;
+            @media (max-width:922px) {
+                height: 150px;
+                top: -15%;
+                @media (max-width:520px) {
+                }
+            }
+        }
+
+        small {
+            @include font(Playfair Display, 10px, 1.25vw, 24px, normal, #898989);
+            line-height: 32px;
+            letter-spacing: 0.02em;
+            position: absolute;
+            bottom: 5vh;
+            width: 100%;
+            text-align: center;
+
+            @media (max-width:922px) {
+            }
+
+            @media (max-width:520px) {
+            }
         }
     }
+
+
+
+
 }

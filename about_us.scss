@@ -21,6 +21,7 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+
     .loading_page {
         position: fixed;
         top: 0;
@@ -29,14 +30,14 @@ body {
         z-index: 10;
         overflow: hidden;
         background-color: #fff;
-    
+
         svg {
             position: absolute;
             bottom: 0;
             width: 66.875vw;
             transition: 0.5s;
             transform: translate(-100%, 0);
-    
+
             @media(max-width: 960px) {
                 width: 54.83vw;
                 transform: rotate(90deg);
@@ -46,7 +47,7 @@ body {
                 transform: translate(0, -150%);
             }
         }
-    
+
         p {
             position: absolute;
             margin: 0;
@@ -55,7 +56,7 @@ body {
             @include font(didot, 92px, 14.0625vw, 270px, 400, #000000C4);
             transition: 0.5s;
             transform: translate(150%, 0);
-    
+
             @media(max-width: 960px) {
                 top: 80%;
                 right: 65.1%;
@@ -63,6 +64,7 @@ body {
             }
         }
     }
+
     header {
         width: 100%;
 
@@ -155,11 +157,11 @@ body {
                 right: 5%;
                 bottom: 5%;
                 border-radius: 50%;
-                height: 3.5vw;
-                width: 3.5vw;
+                height: 50px;
+                width: 50px;
                 text-decoration: none;
                 text-align: center;
-                line-height: 3.5vw;
+                line-height: 50px;
                 background-color: #fff;
                 @include font(Playfair Display, 16px, 1vw, 19.2px, 600, #6A6969);
                 box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
@@ -197,6 +199,7 @@ body {
             @media (max-width:1600px) {
                 height: 350px;
             }
+
             @media (max-width:1400px) {
                 height: 300px;
             }
@@ -497,11 +500,12 @@ body {
                 position: absolute;
                 top: 1227px;
                 left: 73.02%;
-                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) ;
-                &:hover{
-                filter: grayscale(0%) contrast(150%);
-                transform: scale(1.2);
+                transition: 0.7s cubic-bezier(.12, 1.43, 0, -0.45);
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%) contrast(150%);
+                    transform: scale(1.2);
                 }
 
                 @media (max-width:992px) {
@@ -523,11 +527,12 @@ body {
                 position: absolute;
                 top: 1310px;
                 left: 54.8%;
-                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) ;
-                &:hover{
-                filter: grayscale(0%) contrast(150%);
-                transform: scale(1.2);
+                transition: 0.7s cubic-bezier(.12, 1.43, 0, -0.45);
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%) contrast(150%);
+                    transform: scale(1.2);
                 }
 
                 @media (max-width:992px) {
@@ -549,12 +554,14 @@ body {
                 position: absolute;
                 top: 1740px;
                 left: 50.93%;
-                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) ;
-                &:hover{
-                filter: grayscale(0%) contrast(150%);
-                transform: scale(1.2);
+                transition: 0.7s cubic-bezier(.12, 1.43, 0, -0.45);
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%) contrast(100%);
+                    transform: scale(1.2);
                 }
+
                 @media (max-width:1600px) {
                     top: 1600px;
                 }
@@ -578,12 +585,14 @@ body {
                 position: absolute;
                 top: 1658px;
                 left: 65.67%;
-                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) ;
-                &:hover{
-                filter: grayscale(0%) contrast(150%);
-                transform: scale(1.2);
+                transition: 0.7s cubic-bezier(.12, 1.43, 0, -0.45);
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%) contrast(150%);
+                    transform: scale(1.2);
                 }
+
                 @media (max-width:1600px) {
                     top: 1558px;
                 }
@@ -607,12 +616,14 @@ body {
                 position: absolute;
                 top: 1805px;
                 left: 21.04%;
-                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) ;
-                &:hover{
-                filter: grayscale(0%) contrast(150%);
-                transform: scale(1.2);
+                transition: 0.7s cubic-bezier(.12, 1.43, 0, -0.45);
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%) contrast(150%);
+                    transform: scale(1.2);
                 }
+
                 @media (max-width:1600px) {
                     top: 1625px;
                 }
@@ -637,12 +648,14 @@ body {
                 position: absolute;
                 top: 1672px;
                 left: 34.63%;
-                transition: 0.7s cubic-bezier(.12,1.43,0,-0.45);
-                filter: grayscale(100%) ;
-                &:hover{
-                filter: grayscale(0%) contrast(150%);
-                transform: scale(1.2);
+                transition: 0.7s cubic-bezier(.12, 1.43, 0, -0.45);
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%) contrast(150%);
+                    transform: scale(1.2);
                 }
+
                 @media (max-width:1600px) {
                     top: 1572px;
                 }
@@ -687,7 +700,7 @@ body {
         }
 
         small {
-            @include font('Playfair Display', 10px, 1.25vw, 24px , normal, #898989 );
+            @include font('Playfair Display', 10px, 1.25vw, 24px, normal, #898989);
             line-height: 32px;
             letter-spacing: 0.02em;
             position: absolute;
