@@ -685,7 +685,7 @@ body {
         }
 
         small {
-            @include font(Playfair Display, 10px, 1.25vw, 24px, 700, #898989);
+            @include font('Playfair Display', 10px, 1.25vw, 24px , normal, #898989 );
             line-height: 32px;
             letter-spacing: 0.02em;
             position: absolute;

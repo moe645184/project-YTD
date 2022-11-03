@@ -725,9 +725,9 @@ body footer .vertical-line {
   }
 }
 body footer small {
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-size: clamp(10px, 1.25vw, 24px);
-  font-weight: 700;
+  font-weight: normal;
   color: #898989;
   line-height: 32px;
   letter-spacing: 0.02em;

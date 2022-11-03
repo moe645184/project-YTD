@@ -1095,7 +1095,7 @@
                 text-align: center;
                 position: absolute;
                 top: -7.4%;
-                @include font(Playfair Display, 10px, 1.25vw, 24px, 700, #898989)
+                @include font('Playfair Display', 10px, 1.25vw, 24px , normal, #898989 );
             }
         }
     }
