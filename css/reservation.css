@@ -289,9 +289,6 @@
     font-size: 20px;
   }
 }
-* .mask:hover {
-  height: 100%;
-}
 * .idphoto,
 * .petphoto,
 * .artist {

@@ -44,7 +44,9 @@ const other_photo = document.querySelector('.other_photo')
 const other_select = document.querySelector('#other_select')
 const other_sec = document.querySelector('.other_sec')
 
-function commercial1() {
+function commercial1(e) {
+    mask1.style.height='100%'
+    
     mask1.innerHTML =
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
@@ -69,13 +71,15 @@ function commercial1() {
     </div>
     `
 }
-function commercial2() {
+function commercial2(e) {
+    mask1.style.height='8vh'
     mask1.innerHTML =
     `
     Commercial
     `
 }
-function portraits1() {
+function portraits1(e) {
+    mask2.style.height='100%'
     mask2.innerHTML =
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
@@ -90,13 +94,15 @@ function portraits1() {
     </div>
     `
 }
-function portraits2() {
+function portraits2(e) {
+    mask2.style.height='8vh'
     mask2.innerHTML =
     `
     Portraits
     `
 }
-function selection1() {
+function selection1(e) {
+    mask3.style.height='100%'
     mask3.innerHTML =
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
@@ -111,13 +117,15 @@ function selection1() {
     </div>
     `
 }
-function selection2() {
+function selection2(e) {
+    mask3.style.height='8vh';
     mask3.innerHTML =
     `
     Selection
     `
 }
-function activity1() {
+function activity1(e) {
+    mask4.style.height='100%';
     mask4.innerHTML =
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
@@ -131,7 +139,8 @@ function activity1() {
     </div>
     `
 }
-function activity2() {
+function activity2(e) {
+    mask4.style.height='8vh';
     mask4.innerHTML =
     `
     Activity record
@@ -441,31 +450,19 @@ function change_other_op() {
 
 
 mask1.addEventListener('mouseenter',commercial1)
-mask1.addEventListener('touchstart',commercial1)
 mask1.addEventListener('mouseleave',commercial2)
-mask1.addEventListener('touchend',commercial2)
 
 mask2.addEventListener('mouseenter',portraits1)
-mask2.addEventListener('touchstart',portraits1)
 mask2.addEventListener('mouseleave',portraits2)
-mask2.addEventListener('touchend',portraits2)
 
 mask3.addEventListener('mouseenter',selection1)
-mask3.addEventListener('touchstart',selection1)
 mask3.addEventListener('mouseleave',selection2)
-mask3.addEventListener('touchend',selection2)
 
 mask4.addEventListener('mouseenter',activity1)
-mask4.addEventListener('touchstart',activity1)
 mask4.addEventListener('mouseleave',activity2)
-mask4.addEventListener('touchend',activity2)
 
 id_photo1.addEventListener('mouseenter',changephoto_id_before)
-id_photo1.addEventListener('touchstart',changephoto_id_before)
 id_photo1.addEventListener('mouseleave',changephoto_id_after)
-id_photo1.addEventListener('touchend',changephoto_id_after)
 
 selfi1.addEventListener('mouseenter',changephoto_selfi1)
-selfi1.addEventListener('touchstart',changephoto_selfi1)
 selfi1.addEventListener('mouseleave',changephoto_selfi2)
-selfi1.addEventListener('touchend',changephoto_selfi2)

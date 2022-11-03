@@ -416,16 +416,24 @@ body main .quotations .mask {
   width: clamp(170px, 45.99vw, 883px);
   position: absolute;
   top: 220px;
-  left: 44.635%;
+  left: 50%;
   overflow: hidden;
 }
 @media (max-width: 1626px) {
   body main .quotations .mask {
-    left: 50%;
+    width: 40vw;
+    left: 60%;
     top: 160px;
   }
 }
 @media (max-width: 1130px) {
+  body main .quotations .mask {
+    width: 50vw;
+    left: 50%;
+    top: 160px;
+  }
+}
+@media (max-width: 700px) {
   body main .quotations .mask {
     width: 30vw;
     left: 70%;
@@ -434,9 +442,9 @@ body main .quotations .mask {
 }
 @media (max-width: 520px) {
   body main .quotations .mask {
-    width: 45.99vw;
+    width: 50vw;
+    left: 50%;
     top: 66px;
-    left: 207px;
   }
 }
 body main .quotations .mask .mountain-scenery {
@@ -523,7 +531,8 @@ body main .goal-text {
   color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 4104px;
-  left: 14.947%;
+  width: 100%;
+  text-align: center;
   text-transform: capitalize;
   font-style: italic;
 }
@@ -549,8 +558,8 @@ body main .address {
     position: absolute;
     display: block;
     top: 1150px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
   }
 }
 @media (max-width: 390px) {

@@ -44,7 +44,7 @@
 
                 .burger_logo {
                     position: absolute;
-                    top: 7.41vh;
+                    top: 50vh;
                     left: 4.8%;
 
                     @media (max-width:600px) {
@@ -55,7 +55,7 @@
                 .burger_btn_open {
                     cursor: pointer;
                     position: absolute;
-                    top: 7.41vh;
+                    top: 50vh;
                     right: 4.53%;
                     @include font('', 32px, 2.6vw, 50px, 100, #89898966);
                 }
