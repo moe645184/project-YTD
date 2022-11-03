@@ -523,14 +523,13 @@ small {
     position: absolute;
     padding-bottom: 5vh;
     top: 4427px;
-    left: 34.27%;
+    margin: auto;
 
     @media (max-width:922px) {
         top: 2600px;
     }
     @media (max-width:520px) {
         top: 1233px;
-        left: 72px;
     }
 }
 }
