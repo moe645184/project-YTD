@@ -292,7 +292,9 @@
 * .mask:hover {
   height: 100%;
 }
-* .idphoto, * .petphoto, * .artist {
+* .idphoto,
+* .petphoto,
+* .artist {
   width: 100vw;
   height: 90vh;
   display: flex;
@@ -300,7 +302,9 @@
   position: relative;
 }
 @media (max-width: 600px) {
-  * .idphoto, * .petphoto, * .artist {
+  * .idphoto,
+* .petphoto,
+* .artist {
     display: block;
     height: 95vh;
   }
@@ -429,20 +433,26 @@
     margin-bottom: 2vh;
   }
 }
-* .text_idphoto, * .text_petphoto, * .text_artist {
+* .text_idphoto,
+* .text_petphoto,
+* .text_artist {
   width: 43vw;
   margin-top: 20vh;
   padding-left: 6vw;
   position: relative;
 }
 @media (max-width: 900px) {
-  * .text_idphoto, * .text_petphoto, * .text_artist {
+  * .text_idphoto,
+* .text_petphoto,
+* .text_artist {
     margin-top: 10vh;
     padding-left: 3vw;
   }
 }
 @media (max-width: 600px) {
-  * .text_idphoto, * .text_petphoto, * .text_artist {
+  * .text_idphoto,
+* .text_petphoto,
+* .text_artist {
     margin: auto;
     width: 90vw;
     padding-left: 0;
@@ -454,7 +464,9 @@
   font-weight: normal;
   color: #898989;
 }
-* .text_idphoto, * .text_petphoto, * .text_artist ul {
+* .text_idphoto,
+* .text_petphoto,
+* .text_artist ul {
   line-height: 5vh;
   font-family: "hind";
   font-size: clamp(10px, 1.354vw, 26px);
@@ -462,11 +474,15 @@
   color: #000;
 }
 @media (max-width: 900px) {
-  * .text_idphoto, * .text_petphoto, * .text_artist ul {
+  * .text_idphoto,
+* .text_petphoto,
+* .text_artist ul {
     line-height: 3vh;
   }
 }
-* .btn_idphoto, * .btn_petphoto, * .btn_artist {
+* .btn_idphoto,
+* .btn_petphoto,
+* .btn_artist {
   width: 10vw;
   height: 7vh;
   background-color: #FFFFFF;
@@ -481,7 +497,9 @@
   cursor: pointer;
 }
 @media (max-width: 600px) {
-  * .btn_idphoto, * .btn_petphoto, * .btn_artist {
+  * .btn_idphoto,
+* .btn_petphoto,
+* .btn_artist {
     width: 20vw;
     height: 5vh;
     margin: 2vh;
@@ -513,7 +531,9 @@
     line-height: 3vh;
   }
 }
-* .ntd_idphoto, * .ntd_orgi_petphoto, * .ntd_artist {
+* .ntd_idphoto,
+* .ntd_orgi_petphoto,
+* .ntd_artist {
   font-family: "GenRyuMin JP";
   font-size: clamp(16px, 2.083vw, 40px);
   font-weight: normal;
@@ -524,12 +544,16 @@
   margin-top: 20vh;
 }
 @media (max-width: 900px) {
-  * .ntd_idphoto, * .ntd_orgi_petphoto, * .ntd_artist {
+  * .ntd_idphoto,
+* .ntd_orgi_petphoto,
+* .ntd_artist {
     margin-top: 10vh;
   }
 }
 @media (max-width: 600px) {
-  * .ntd_idphoto, * .ntd_orgi_petphoto, * .ntd_artist {
+  * .ntd_idphoto,
+* .ntd_orgi_petphoto,
+* .ntd_artist {
     position: absolute;
     margin: 0;
     width: 25vw;
@@ -543,7 +567,8 @@
   }
 }
 @media (max-width: 600px) {
-  * .ntd_orgi_petphoto, * .ntd_artist {
+  * .ntd_orgi_petphoto,
+* .ntd_artist {
     bottom: 41vh;
   }
 }
@@ -608,6 +633,12 @@
   width: 40vw;
   margin: 4.6vh 0 0 60vw;
 }
+@media (max-width: 500px) {
+  * #other {
+    width: 60vw;
+    margin: 4.6vh 0 0 40vw;
+  }
+}
 * .title_pro {
   width: 60vw;
   margin: 50px 0 0 40vw;
@@ -618,7 +649,9 @@
     margin: 50px 0 0 10vw;
   }
 }
-* .selfieshoot, * .pro, * .other {
+* .selfieshoot,
+* .pro,
+* .other {
   display: flex;
   position: relative;
   flex-direction: row-reverse;
@@ -626,20 +659,28 @@
   height: 90vh;
 }
 @media (max-width: 600px) {
-  * .selfieshoot, * .pro, * .other {
+  * .selfieshoot,
+* .pro,
+* .other {
     display: block;
     height: 95vh;
   }
 }
-* .text_selfieshoot, * .text_pro, * .text_other {
+* .text_selfieshoot,
+* .text_pro,
+* .text_other {
   margin-top: 20vh;
 }
 @media (max-width: 900px) {
-  * .text_selfieshoot, * .text_pro, * .text_other {
+  * .text_selfieshoot,
+* .text_pro,
+* .text_other {
     margin-top: 10vh;
   }
 }
-* .text_selfieshoot, * .text_pro, * .text_other ul {
+* .text_selfieshoot,
+* .text_pro,
+* .text_other ul {
   line-height: 5vh;
   width: 55vw;
   font-family: "Hind";
@@ -648,12 +689,16 @@
   color: #000;
 }
 @media (max-width: 900px) {
-  * .text_selfieshoot, * .text_pro, * .text_other ul {
+  * .text_selfieshoot,
+* .text_pro,
+* .text_other ul {
     line-height: 4vh;
   }
 }
 @media (max-width: 600px) {
-  * .text_selfieshoot, * .text_pro, * .text_other ul {
+  * .text_selfieshoot,
+* .text_pro,
+* .text_other ul {
     margin: auto;
     width: 90vw;
     line-height: 3vh;
@@ -669,7 +714,9 @@
 * .text_other ul {
   padding-left: 5vw;
 }
-* .btn_selfieshoot, * .btn_pro, * .btn_other {
+* .btn_selfieshoot,
+* .btn_pro,
+* .btn_other {
   width: 11vw;
   height: 8vh;
   background-color: #FFFFFF;
@@ -684,7 +731,9 @@
   cursor: pointer;
 }
 @media (max-width: 600px) {
-  * .btn_selfieshoot, * .btn_pro, * .btn_other {
+  * .btn_selfieshoot,
+* .btn_pro,
+* .btn_other {
     width: 20vw;
     height: 5vh;
     margin: 2vh;
@@ -694,7 +743,8 @@
   transform: translate(2px, 2px);
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
-* .plus_selfieshoot, * .plus_pro {
+* .plus_selfieshoot,
+* .plus_pro {
   color: #901919;
   position: absolute;
   top: 60vh;
@@ -707,13 +757,15 @@
   color: #901919;
 }
 @media (max-width: 900px) {
-  * .plus_selfieshoot, * .plus_pro {
+  * .plus_selfieshoot,
+* .plus_pro {
     top: 50vh;
     line-height: 4vh;
   }
 }
 @media (max-width: 600px) {
-  * .plus_selfieshoot, * .plus_pro {
+  * .plus_selfieshoot,
+* .plus_pro {
     top: 80vh;
     width: 80vw;
     left: 11vw;
@@ -735,7 +787,9 @@
     line-height: 3vh;
   }
 }
-* .levelbox_selfieshoot, * .levelbox_pro, * .levelbox_other {
+* .levelbox_selfieshoot,
+* .levelbox_pro,
+* .levelbox_other {
   width: clamp(202px, 20vw, 416px);
   height: 70vh;
   background-color: #EEEEEE;
@@ -748,17 +802,23 @@
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 900px) {
-  * .levelbox_selfieshoot, * .levelbox_pro, * .levelbox_other {
+  * .levelbox_selfieshoot,
+* .levelbox_pro,
+* .levelbox_other {
     height: 50vh;
   }
 }
 @media (max-width: 600px) {
-  * .levelbox_selfieshoot, * .levelbox_pro, * .levelbox_other {
+  * .levelbox_selfieshoot,
+* .levelbox_pro,
+* .levelbox_other {
     height: 50vh;
     margin: 2vh auto;
   }
 }
-* .ntd_orgi_selfieshoot, * .ntd_orgi_pro, * .ntd_orgi_other {
+* .ntd_orgi_selfieshoot,
+* .ntd_orgi_pro,
+* .ntd_orgi_other {
   font-family: "GenRyuMin JP";
   font-size: clamp(16px, 2.083vw, 40px);
   font-weight: normal;
@@ -768,12 +828,16 @@
   right: 40vw;
 }
 @media (max-width: 900px) {
-  * .ntd_orgi_selfieshoot, * .ntd_orgi_pro, * .ntd_orgi_other {
+  * .ntd_orgi_selfieshoot,
+* .ntd_orgi_pro,
+* .ntd_orgi_other {
     top: 10vh;
   }
 }
 @media (max-width: 600px) {
-  * .ntd_orgi_selfieshoot, * .ntd_orgi_pro, * .ntd_orgi_other {
+  * .ntd_orgi_selfieshoot,
+* .ntd_orgi_pro,
+* .ntd_orgi_other {
     top: 52vh;
     right: 5vw;
   }

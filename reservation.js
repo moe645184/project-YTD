@@ -441,14 +441,31 @@ function change_other_op() {
 
 
 mask1.addEventListener('mouseenter',commercial1)
+mask1.addEventListener('touchstart',commercial1)
 mask1.addEventListener('mouseleave',commercial2)
+mask1.addEventListener('touchend',commercial2)
+
 mask2.addEventListener('mouseenter',portraits1)
+mask2.addEventListener('touchstart',portraits1)
 mask2.addEventListener('mouseleave',portraits2)
+mask2.addEventListener('touchend',portraits2)
+
 mask3.addEventListener('mouseenter',selection1)
+mask3.addEventListener('touchstart',selection1)
 mask3.addEventListener('mouseleave',selection2)
+mask3.addEventListener('touchend',selection2)
+
 mask4.addEventListener('mouseenter',activity1)
+mask4.addEventListener('touchstart',activity1)
 mask4.addEventListener('mouseleave',activity2)
+mask4.addEventListener('touchend',activity2)
+
 id_photo1.addEventListener('mouseenter',changephoto_id_before)
+id_photo1.addEventListener('touchstart',changephoto_id_before)
 id_photo1.addEventListener('mouseleave',changephoto_id_after)
+id_photo1.addEventListener('touchend',changephoto_id_after)
+
 selfi1.addEventListener('mouseenter',changephoto_selfi1)
+selfi1.addEventListener('touchstart',changephoto_selfi1)
 selfi1.addEventListener('mouseleave',changephoto_selfi2)
+selfi1.addEventListener('touchend',changephoto_selfi2)
