@@ -44,7 +44,7 @@ const other_photo = document.querySelector('.other_photo')
 const other_select = document.querySelector('#other_select')
 const other_sec = document.querySelector('.other_sec')
 
-function commercial1(e) {
+function commercial1() {
     mask1.style.height='100%'
     
     mask1.innerHTML =
@@ -71,14 +71,14 @@ function commercial1(e) {
     </div>
     `
 }
-function commercial2(e) {
+function commercial2() {
     mask1.style.height='8vh'
     mask1.innerHTML =
     `
     Commercial
     `
 }
-function portraits1(e) {
+function portraits1() {
     mask2.style.height='100%'
     mask2.innerHTML =
     `
@@ -94,14 +94,14 @@ function portraits1(e) {
     </div>
     `
 }
-function portraits2(e) {
+function portraits2() {
     mask2.style.height='8vh'
     mask2.innerHTML =
     `
     Portraits
     `
 }
-function selection1(e) {
+function selection1() {
     mask3.style.height='100%'
     mask3.innerHTML =
     `
@@ -117,14 +117,14 @@ function selection1(e) {
     </div>
     `
 }
-function selection2(e) {
+function selection2() {
     mask3.style.height='8vh';
     mask3.innerHTML =
     `
     Selection
     `
 }
-function activity1(e) {
+function activity1() {
     mask4.style.height='100%';
     mask4.innerHTML =
     `
@@ -139,7 +139,7 @@ function activity1(e) {
     </div>
     `
 }
-function activity2(e) {
+function activity2() {
     mask4.style.height='8vh';
     mask4.innerHTML =
     `
@@ -448,7 +448,7 @@ function change_other_op() {
     }
 }
 
-
+if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 mask1.addEventListener('mouseenter',commercial1)
 mask1.addEventListener('mouseleave',commercial2)
 
@@ -466,3 +466,9 @@ id_photo1.addEventListener('mouseleave',changephoto_id_after)
 
 selfi1.addEventListener('mouseenter',changephoto_selfi1)
 selfi1.addEventListener('mouseleave',changephoto_selfi2)
+}else{
+    mask1.addEventListener('touchstart',commercial1)
+    mask2.addEventListener('touchstart',portraits1)
+    mask3.addEventListener('touchstart',selection1)
+    mask4.addEventListener('touchstart',activity1)
+}
