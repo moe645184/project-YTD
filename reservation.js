@@ -51,7 +51,7 @@ function commercial1() {
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
         <div style = 'font-family:GenRyuMin JP;'>
-            <span style = 'font-size:2.083vw;'>商業攝影</span>
+            <span style = 'font-size:clamp(14px,2.083vw,40px)'>商業攝影</span>
         </div>
         <div 
         style = 
@@ -84,7 +84,7 @@ function portraits1() {
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
         <div style = 'font-family:GenRyuMin JP;'>
-            <span style = 'font-size:2.083vw;'>人像攝影</span>
+            <span style = 'font-size:clamp(14px,2.083vw,40px)'>人像攝影</span>
         </div>
         <div style = 'font-size:1.354vw;font-family:GenRyuMin JP;line-height: 5vh;display:flex;flex-direction: column;align-items: center;justify-content: center;'>
             <span><a href="#pro">形象照</a></span>
@@ -107,7 +107,7 @@ function selection1() {
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
         <div style = 'font-family:GenRyuMin JP;'>
-            <span style = 'font-size:2.083vw;'>工作室精選</span>
+            <span style = 'font-size:clamp(14px,2.083vw,40px)'>工作室精選</span>
         </div>
         <div style = 'font-size:1.354vw;font-family:GenRyuMin JP;line-height: 5vh;display:flex;flex-direction: column;align-items: center;justify-content: center;'>
             <span><a href="#id_photo">證件照</a></span>
@@ -130,7 +130,7 @@ function activity1() {
     `
     <div style = 'height: 100%;display:flex;flex-direction: column;justify-content: center;'>
         <div style = 'font-family:GenRyuMin JP;'>
-            <span style = 'font-size:2.083vw;'>活動紀錄</span>
+            <span style = 'font-size:clamp(14px,2.083vw,40px)'>活動紀錄</span>
         </div>
         <div style = 'font-size:1.354vw;font-family:GenRyuMin JP;line-height: 5vh;display:flex;flex-direction: column;align-items: center;justify-content: center;'>
             <span><a href="#other">商業活動</a></span>
