@@ -548,12 +548,16 @@
                     }
 
                     path {
-                        stroke-dasharray: 1160;
-                        stroke-dashoffset: 1160;
+                        stroke-dasharray: 1700;
+                        stroke-dashoffset: 1700;
                         stroke: #666;
 
                         &.svg_animation {
                             animation: svgshow2 5s ease-out forwards;
+
+                            @media (max-width:1100px) {
+                            animation: svgshow 5s ease-out forwards;
+                            }
                         }
                     }
 
@@ -581,12 +585,15 @@
                     }
 
                     path {
-                        stroke-dasharray: 1160;
-                        stroke-dashoffset: 1160;
+                        stroke-dasharray: 1700;
+                        stroke-dashoffset: 1700;
                         stroke: #666;
 
                         &.svg_animation {
                             animation: svgshow2 5s ease-out forwards;
+                            @media (max-width:1100px) {
+                                animation: svgshow 5s ease-out forwards;
+                                }
                         }
                     }
                 }
@@ -619,6 +626,9 @@
 
                         &.svg_animation {
                             animation: svgshow2 5s ease-out forwards;
+                            @media (max-width:1100px) {
+                                animation: svgshow 5s ease-out forwards;
+                                }
                         }
                     }
                 }
