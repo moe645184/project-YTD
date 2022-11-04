@@ -695,7 +695,8 @@ body {
             }
 
             @media (max-width:525px) {
-                display: none;
+                top: 1300px;
+                height: 200px;
             }
         }
 
@@ -706,7 +707,8 @@ body {
             position: absolute;
             padding-bottom: 5vh;
             top: 2602px;
-            left: 35.2%;
+            width: 100%;
+            text-align: center;
 
             @media (max-width:992px) {
                 top: 2000px;
@@ -717,8 +719,7 @@ body {
             }
 
             @media (max-width:525px) {
-                top: 1386px;
-                left: 72px;
+                top: 1600px;
                 line-height: 13px;
                 text-align: center;
             }

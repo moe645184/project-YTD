@@ -721,7 +721,8 @@ body footer .vertical-line {
 }
 @media (max-width: 525px) {
   body footer .vertical-line {
-    display: none;
+    top: 1300px;
+    height: 200px;
   }
 }
 body footer small {
@@ -734,7 +735,8 @@ body footer small {
   position: absolute;
   padding-bottom: 5vh;
   top: 2602px;
-  left: 35.2%;
+  width: 100%;
+  text-align: center;
 }
 @media (max-width: 992px) {
   body footer small {
@@ -748,8 +750,7 @@ body footer small {
 }
 @media (max-width: 525px) {
   body footer small {
-    top: 1386px;
-    left: 72px;
+    top: 1600px;
     line-height: 13px;
     text-align: center;
   }
